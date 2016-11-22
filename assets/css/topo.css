@@ -17,7 +17,6 @@ header h2{
   	line-height: 1.098;
   	text-align: center;
   	text-shadow: 0.11em 0.06em 0.2px rgba(10, 10, 10, 0.16);
-
 }
 @media (min-width: 82em) { 
 	header h2{

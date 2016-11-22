@@ -16,3 +16,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Candara';
+	src: url('fonts/Candara.eot');
+	src: url('fonts/Candara.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Candara.woff') format('woff'),
+		url('fonts/Candara.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

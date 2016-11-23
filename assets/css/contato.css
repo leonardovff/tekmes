@@ -1705,28 +1705,25 @@ body:not([class*=ncf_exposed]):not([class*=ncf_transitioning]) .nks_cc_trigger_t
 .bg6 #ncf_sidebar {
     background-image: url(img/bg6.jpg) !important;
     background-size: auto !important;
-
 }
-
-
 .ncf_theme_flat .ncf_sidebar_header {
-    background-color: #2B93C0 !important;
+    background-color: #7a0f0f !important;
 }
 
 .ncf_flat .ncf_sidebar_socialbar ul li a {
     display: none !important;
-}
 
-.ncf_flat .ncf_color1 {background: #2B93C0 !important;}
-.ncf_flat .ncf_color2 {background: #39A2CF !important;}
-.ncf_flat .ncf_color3 {background: #249ACD !important;}
-.ncf_flat .ncf_color4 {background: #3E9DD9 !important;}
-.ncf_flat .ncf_color5 {background: #3F9EC8 !important;}
-.ncf_flat .ncf_color6 {background: #1F8CBB !important;}
-.ncf_flat .ncf_color7 {background: #3D96E9 !important;}
-.ncf_flat .ncf_color8 {background: #3DB5E9 !important;}
+}
+.ncf_flat .ncf_color1 {background: #7a0f0f !important;}
+.ncf_flat .ncf_color2 {background: #a51c1c !important;}
+.ncf_flat .ncf_color3 {background: #8a1212 !important;}
+.ncf_flat .ncf_color4 {background: #a21c09 !important;}
+.ncf_flat .ncf_color5 {background: #540808 !important;}
+.ncf_flat .ncf_color6 {background: #a51c1c !important;}
+.ncf_flat .ncf_color7 {background: #f17676 !important;}
+.ncf_flat .ncf_color8 {background: #a51c1c !important;}
 .ncf_flat .ncf_user_title {
-    color: #04425D !important;
+    color: #ffffff !important;
 }
 #ncf_sidebar.ncf_flat input[type=text]:focus, #ncf_sidebar.ncf_flat input[type=email]:focus, #ncf_sidebar.ncf_flat input[type=date]:focus, #ncf_sidebar.ncf_flat input[type=tel]:focus, #ncf_sidebar.ncf_flat textarea:focus {
     border-color: #3DB5E9;

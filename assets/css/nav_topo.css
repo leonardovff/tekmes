@@ -33,6 +33,7 @@ nav .btn-menu{
 	width: 50%;
 }
 .menu-nav{
+	z-index: 100;
 	position: relative;
 	float:right;
     display: -webkit-flex;
@@ -77,6 +78,7 @@ nav .btn-menu{
 		width: 20%;
 	}
 	.menu-nav{
+		position: relative;
     	justify-content: flex-end;
 		align-items: right;
 	    width: 80%;

@@ -1,7 +1,7 @@
 header{
+	position: relative;
 	color:white;
 }
-
 header>section{
 	clear:both;
 	text-align: center;
@@ -21,15 +21,17 @@ header h2{
   	text-shadow: 0.06em 0.09em 0.2px rgba(10, 10, 10, 0.2);
 }
 header h2::before,
-header h2::after{
-	position: absolute;
+header h2::after
+{	position: absolute;
 	content: "";
 	width: 35%;
 	left: 50%;
 	top: -0.55em;
 	border: solid #bf8f00;
 	border-width: 0.15em 0 0;
-	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 header h2::after{
 	top: auto;

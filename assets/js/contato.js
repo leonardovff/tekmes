@@ -30,6 +30,7 @@
             success: "Your message was successfully sent!"
         };
     console.log(opts);
+    console.log('entrou');
     var html = {}
     html.flat = '<div id="ncf_sidebar" class="ncf_flat ncf_up_style_theme_custom"><div class="ncf_sidebar_cont_scrollable">';
         html.flat += '<div class="ncf_sidebar_cont ncf_shrinked" style="min-height: 0px;">';
@@ -46,7 +47,9 @@
                 html.flat += '</ul></div>';
                 html.flat += '<div class="ncf_sidebar_header_userinfo ncf_color1">';
                 html.flat += '<div class="ncf_userpic"><img src="https://media.licdn.com/media/p/7/000/2bf/301/1282acc.jpg" alt=""></div> <div class="ncf_user_credentials"> <span class="ncf_user_firstname"></span> <span class="ncf_user_lastname">Fábio Souza</span> <span class="ncf_user_title">Donec vel leo non leo cursus finibus id a sem.</span> </div> </div>  </div> <div class="ncf_sidebar_content"> <div class="ncf_user_bio">Duis consectetur lacus sed scelerisque fringilla</div> <form class="ncf_form" action="" id="nk_form_1"> <input type="hidden" name="action" value="ncf_send_message"> <input type="hidden" name="ncf_form_index" value="1"> <div class="ncf_form_input_wrapper ncf_name_field ncf_ph"> <input type="text" name="ncf_name_field" id="ncf_name_field" data-rules="required|min[2]|max[32]" data-name="Seu nome"><label for="ncf_name_field">Seu nome *</label> </div> <div class="ncf_form_input_wrapper ncf_email_field ncf_ph"> <input type="email" name="ncf_email_field" id="ncf_email_field" data-rules="required|email" data-name="Seu email"><label for="ncf_email_field">Seu email *</label> </div> <div class="ncf_form_input_wrapper ncf_message_field ncf_ph"> <textarea name="ncf_message_field" id="ncf_message_field" cols="30" rows="10" data-rules="required" data-name="Sua mensagem"></textarea><label for="ncf_message_field">Sua mensagem *</label> <div class="ncf_form_btn_wrapper"> <div class="ncf_question_wrapper ncf_ph"><input type="text" name="ncf_answer_field" id="ncf_answer_field" maxlength="2" data-rules="required|numeric|answer[14]" data-name="Answer"><label id="ncf_question" for="ncf_answer_field">8 + 6 = ?</label> </div> <a class="ncf_button ncf_color1" href="#"><span>Send</span></a> <input type="submit" value="Send"> </div> </form> <div class="ncf_form_result"></div> </div> </div> </div> </div> </div>';
-        html = html[opts.theme], $("body").prepend(html).addClass("ncf_theme_" + opts.theme), "right" === opts.sidebar_pos && $(".direction").html("right"), "aerial" !== opts.theme && $(".nks_cc_trigger_tabs").addClass("nks_metro"), "flat" !== opts.theme && $(".nks_cc_trigger_tabs").addClass("ncf_hover"),
+        html = html[opts.theme], 
+        $("body").prepend(html).addClass("ncf_theme_" + opts.theme), "right" === opts.sidebar_pos && $(".direction").html("right"), "flat" !== opts.theme && $(".nks_cc_trigger_tabs").addClass("ncf_hover"),
+        // $(".nks_cc_trigger_tabs").addClass("ncf_hover");
         function(a) {
             if (!a.transitionEnd) {
                 var e = {

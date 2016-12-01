@@ -1,0 +1,46 @@
+section.sct{
+	width: 100%;
+	background: red;
+	padding: 2em 0;
+}
+section.sct h3{
+	color: #494949;
+	font-size: 1.3em;
+	margin-bottom: 1.1em;
+}
+section.sct h3,
+section.sct h4{
+	font-family: "Candara";
+	text-align: center;
+}
+section.sct h4{
+	display: none;
+	width: 90%;
+	font-size: 0.8em;
+	margin: 0 auto;
+}
+#servicos-produtos.sct,
+#noticias{
+	background: white;
+}
+#portfolio{
+	background: url("../img/pattern-portfolio.jpg");
+}
+@media (min-width: 34em) { 
+	section.sct{
+		padding: 4em 0 6em;
+	}
+	section.sct h4{
+		width: 74%;
+		display: block;
+	}
+	section.sct h4{
+		font-size: 1em
+	}
+}
+@media (min-width: 62em) { 
+	section.sct h3{
+		color: #494949;
+		font-size: 2em;
+	}
+}

@@ -25,3 +25,31 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Candara';
+	src: url('fonts/Candara.eot');
+	src: url('fonts/Candara.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Candara.woff') format('woff'),
+		url('fonts/Candara.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Signika Negative Bold';
+	src: url('fonts/SignikaNegative-Bold.eot');
+	src: url('fonts/SignikaNegative-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/SignikaNegative-Bold.woff') format('woff'),
+		url('fonts/SignikaNegative-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Signika Negative';
+	src: url('fonts/SignikaNegative-Regular.eot');
+	src: url('fonts/SignikaNegative-Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/SignikaNegative-Regular.woff') format('woff'),
+		url('fonts/SignikaNegative-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

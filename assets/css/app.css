@@ -8,3 +8,6 @@ body, html{
 header{
 	z-index: 100;
 }
+main{
+	z-index: 100;
+}

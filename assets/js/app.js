@@ -14,6 +14,9 @@ app = {
 		}, false);
 	},
 	init: function(){
+		var carousel;
+	    carousel = $("#scrolling>ul");
+	    carousel.itemslide();
 		app.setEvents();
 	}
 }

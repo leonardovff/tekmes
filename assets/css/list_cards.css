@@ -1,0 +1,59 @@
+.list-cards{
+	text-align: center;
+}
+.list-cards>li{
+	width: 8.5%;
+	margin-left: 0.1em;
+	border-radius: 0.3em;
+	/*float: left;*/
+	height: 220px;
+	background-color: white;
+	font-family: "Signika Negative Bold";
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    transform: scale(0.7);
+    box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #DFDFDF;
+}
+.list-cards>li .card-img{
+	height: 77%;
+	background-color: #303030;
+}
+.list-cards>li .card-img img{
+	max-height: 97%;
+}
+#scrolling { /* Carousel Frame */
+	margin-top: 5em;
+	width: auto;
+    overflow: hidden;
+}
+
+#scrolling>ul{
+    margin: 0;
+    width: 2000%;
+    padding: 0;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#scrolling>ul>li {
+    float: left;
+}
+.list-cards>li.itemslide-active{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+@media (min-width: 34em) {
+
+} 
+@media (min-width: 62em) { 
+	.list-cards>li{
+		width: 5%;
+		margin-left: 2em;
+	}
+}

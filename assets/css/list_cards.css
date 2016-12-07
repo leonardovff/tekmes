@@ -1,59 +1,128 @@
 .list-cards{
-	text-align: center;
+    text-align: center;
+    font-family: "Signika Negative";
 }
-.list-cards>li{
-	width: 8.5%;
-	margin-left: 0.1em;
-	border-radius: 0.3em;
-	/*float: left;*/
-	height: 220px;
-	background-color: white;
-	font-family: "Signika Negative Bold";
-    -webkit-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    transform: scale(0.7);
-    box-shadow: 0 0.1em 0.4em rgba(0, 0, 0, 0.4);
+.card-item{
+    width: 8%;
+    border-radius: 0.4em;
+    background-color: white;
+    overflow: hidden;
+    -webkit-transform: scale(0.79) translateY(14%);
+    -ms-transform: scale(0.79) translateY(14%);
+    -moz-transform: scale(0.79) translateY(14%);
+    transform: scale(0.79) translateY(14%);
     border-bottom: 1px solid #DFDFDF;
+    float: left;
+    box-shadow: 0 0.5em 0.6em 0 rgba(10, 10, 10, 0.04 );
+    cursor: zoom-in;
 }
-.list-cards>li .card-img{
-	height: 77%;
-	background-color: #303030;
+.card-item .card-img{
+    position: relative;   
 }
-.list-cards>li .card-img img{
-	max-height: 97%;
+.card-img .card-empresa{
+    bottom: 7%;
+    right: 5%;
+    padding: 0.2em 0.25em;
+    border-radius: 0.3em;
+    text-transform: uppercase;
+    background-color: #ff0000;
+    color: white;
+    position: absolute;
 }
-#scrolling { /* Carousel Frame */
-	margin-top: 5em;
-	width: auto;
+.card-item.itemslide-active .card-empresa{
+    left: 5%;
+    right: auto;
+    top: 7%;
+    bottom: auto;
+
+}
+.card-time{
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: 2.8;
+    font-size: 0.7em;
+}
+.card-item .card-content{
+    color: #494949;
+}
+.card-item.itemslide-active .card-content{
+    padding: 1.5em 0 3.2em;
+}
+.card-item .card-img img{
+    width: 100%;
+}
+.card-item .card-content p,
+.card-item .card-content .btn-view-details{
+    display: none;
+}
+
+.card-item.itemslide-active .card-content p,
+.card-item.itemslide-active .card-content .btn-view-details{
+    display: inline-block;
+}
+.card-content .btn-view-details{
+    border-radius: 0 0.4em 0.4em 0;
+}
+.card-description{
+    display: block;
+    margin: 0.6em 0.9em;
+    font-size: 0.8em;
+}
+.card-item .title,
+.card-item .title{
+    margin: 2em 0;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.card-item.itemslide-active .title{
+    margin: 0;    
+}
+
+/* Carousel Frame */
+#scrolling {    
+    /*margin-top: 5em;*/
+    width: auto;
     overflow: hidden;
 }
 
 #scrolling>ul{
-    margin: 0;
     width: 2000%;
-    padding: 0;
     position: relative;
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
+/* end - Carousel Frame */
 
-#scrolling>ul>li {
-    float: left;
+.card-item.itemslide-active{
+    cursor: pointer;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
 }
-.list-cards>li.itemslide-active{
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -moz-transform: scale(1);
-    transform: scale(1);
-}
+
 @media (min-width: 34em) {
+    .list-cards{
+        font-size: 1.5em;
+    }
 
+    .card-item{
+        width: 7%;
+    }
+    #scrolling {    
+        margin-top: 5em;
+    }
 } 
+
+@media (min-width: 50em) { 
+    .list-cards .card-item{
+        width: 6%;
+        margin-left: 2em;
+    }
+}
 @media (min-width: 62em) { 
-	.list-cards>li{
+	.list-cards .card-item{
 		width: 5%;
-		margin-left: 2em;
 	}
 }

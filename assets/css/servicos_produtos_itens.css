@@ -59,6 +59,10 @@
 .list-rect>li:hover .btn-view-details{
 	background-color: #990000;
 }
+.card-time{
+	text-align: right;
+}
+
 .btn-view-details{
 	padding:0.5em 1.1em;
 	text-transform: uppercase;

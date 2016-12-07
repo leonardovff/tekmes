@@ -11,3 +11,21 @@ header{
 main{
 	z-index: 100;
 }
+.sz-40{
+	width: 40%;
+}
+.sz-50{
+	width: 50%;
+}
+.sz-60{
+	width: 60%;
+}
+.fleft{
+	float: left;
+}
+.fright{
+	float: right;
+}
+.tleft {
+	text-align: left; 
+}

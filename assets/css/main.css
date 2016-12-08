@@ -19,7 +19,14 @@ section.sct h4{
 	font-size: 0.8em;
 	margin: 0 auto;
 }
-
+section#noticias{
+	overflow: auto;
+}
+#noticias>.content{
+	margin: 0 auto;
+	width: 80%;
+	border-radius: 0.4em;
+}
 #servicos-produtos.sct,
 #noticias{
 	background: white;
@@ -28,6 +35,9 @@ section.sct h4{
 	background: url("../img/pattern-portfolio.jpg");
 }
 @media (min-width: 34em) { 
+	#noticias>.content{
+		width: 90%;
+	}
 	section.sct{
 		padding: 4em 0 6em;
 	}
@@ -40,6 +50,9 @@ section.sct h4{
 	}
 }
 @media (min-width: 62em) { 
+	#noticias>.content{
+		width: 85%;
+	}
 	section.sct h3{
 		color: #494949;
 		font-size: 2em;

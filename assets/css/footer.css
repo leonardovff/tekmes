@@ -1,0 +1,33 @@
+footer{
+	font-family: "Candara";
+	clear: both;
+}
+#tarja-branca{
+	width: 100%;
+	color: black;
+	padding: 1em 1.5em;
+	overflow: auto;
+	background-color: white;
+}
+#tarja-branca .redes{
+	float: left;
+}
+.redes li{
+	float: left;
+}
+#tarja-branca .newsletter{
+	float: right;
+}
+#creditos{
+	width: 100%;
+	background-color: #494949;
+	clear: both;
+	color: white;
+	padding: 0.5em;
+}
+#creditos>p{
+	float: right;
+}
+#creditos>p>a{
+	color: white;
+}

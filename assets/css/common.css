@@ -26,6 +26,35 @@
 	vertical-align: middle;
 	padding: 0 1.5em;
 }
-.btn-action{
-
+.input-with-send{
+	display: table;
+	overflow: hidden;
+	height: 100%;
+	font-size: 12px;
+	border-radius: 0.8em;
+}
+.input-with-send>.iws-input,
+.input-with-send>.iws-send{
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+	border: none;
+}
+.input-with-send>.iws-input{
+	padding: 0;
+	margin: 0;
+	background-color: #7a7979;
+	border:0.124em solid white;
+	border-right: 0;
+	color: white;
+	padding: 0 1em;
+}
+.input-with-send i{
+	font-size: 1.2em;
+	vertical-align: middle;
+	display: table-cell;
+	padding: 0.65em 0.8em;
+}
+.input-with-send>.iws-send{
+	background-color: #990000;
 }

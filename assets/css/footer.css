@@ -29,6 +29,9 @@ footer{
 	text-align: center;
 	width: 100%;
 }
+#tarja-branca .newsletter{
+	text-align: center;
+}
 .redes ul{
 	display: inline-block;
 }
@@ -57,6 +60,9 @@ footer{
 }
 .newsletter .tb-title{
 	margin-top: 0.5em;
+}
+.newsletter form{
+	display: inline-block;
 }
 #creditos{
 	font-size: .75em;

@@ -1247,7 +1247,24 @@ body:not('.ncf_hidden') .nks_cc_trigger_tabs .fa-3x.ncf-tab-icon .fa-stack-1x:be
     transform: none;
     -webkit-backface-visibility: hidden;
 }
+
 /*modificado*/
+.nks_cc_trigger_tabs.fixed{
+    position: fixed!important;
+    top: 18%!important;
+    bottom: auto;
+}
+
+@media (min-width: 31em) { 
+    .nks_cc_trigger_tabs.fixed{
+        top: 30%!important;
+    }
+}
+@media (min-width: 62em) { 
+    .nks_cc_trigger_tabs.fixed{
+        top: 25%!important;
+    }
+}
 .btn-open::after {
     content: 'CONTATO';
     position: absolute;

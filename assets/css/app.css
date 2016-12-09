@@ -1,14 +1,17 @@
 body{
 	font-size: 14px;
+	padding-top: 8%; /*defualt - offjs */
 }
 body, html{
 	width: 100%;
 	min-height: 100%;
 }
-header,
 main, 
 footer{
 	z-index: 100;
+}
+header{
+	z-index: 101;
 }
 .sz-40{
 	width: 40%;

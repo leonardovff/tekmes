@@ -7,7 +7,7 @@ footer{
 	font-size: 1em;
 	width: 100%;
 	color: black;
-	padding: 1.35em 1.5e;mt
+	padding: 1.35em 1.5em;
 	overflow: auto;
 	background-color: white;
 }
@@ -119,7 +119,7 @@ footer{
 		float: right;
 	}
 	#tarja-branca{
-		padding: 1em 1.5em;
+		padding: 1.8em 2em;
 	}
 }
 @media (min-width: 62em) { 

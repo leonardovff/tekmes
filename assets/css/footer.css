@@ -119,9 +119,6 @@ footer{
 		float: right;
 	}
 	#tarja-branca{
-		padding: 1.8em 2em;
+		padding: 1em 2em .6em;
 	}
-}
-@media (min-width: 62em) { 
-
 }

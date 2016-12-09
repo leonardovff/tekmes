@@ -63,11 +63,11 @@ li.ls-nav-atual>a{
 	font-size: 1.5em;
 	margin: 0 auto;
 }
-#item-sobre a{
-	width: 20px;
-	margin: 0 auto;
-	display: inline-block;
-	display: none;
+#item-sobre{
+	text-align: center;
+}
+#item-sobre .btn-action{
+	margin: 2em auto 0;
 }
 @media (min-width: 34em) { 
 	.list-sobre{

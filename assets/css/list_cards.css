@@ -52,16 +52,21 @@
     width: 100%;
 }
 .card-item .card-content p,
-.card-item .card-content .btn-view-details{
+.card-item .card-content .btn-action{
     display: none;
 }
+.card-item .btn-action{
+    float:left;
+}
+.card-content>div{
+    padding-left: 0.5em;
+}
 
-.card-item.itemslide-active .card-content p,
-.card-item.itemslide-active .card-content .btn-view-details{
+.card-item.itemslide-active .card-content p{
     display: inline-block;
 }
-.card-content .btn-view-details{
-    border-radius: 0 0.4em 0.4em 0;
+.card-item.itemslide-active .card-content .btn-action{
+    display: table;
 }
 .card-description{
     display: block;

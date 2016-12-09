@@ -1,33 +1,127 @@
 footer{
+	font-size: 0.9em;
 	font-family: "Candara";
 	clear: both;
 }
 #tarja-branca{
+	font-size: 1em;
 	width: 100%;
 	color: black;
-	padding: 1em 1.5em;
+	padding: 1.35em 1.5em;
 	overflow: auto;
 	background-color: white;
 }
-#tarja-branca .redes{
-	float: left;
+#tarja-branca .redes,
+#tarja-branca .newsletter{
+	width: 100%;
+	text-transform: uppercase;
+	overflow: hidden;
+	text-align: center;
+	margin-bottom: 1em;
+	/*float: left;*/
+}
+.tb-title{
+	font-size: 1.1em;
+	margin-bottom: 0.8em;
+}
+
+#tarja-branca .newsletter legend{
+	text-align: center;
+	width: 100%;
+}
+.redes ul{
+	display: inline-block;
 }
 .redes li{
+	width: 35px;
+	height: 35px;
+	text-indent: -99999px;
+	background: url("../img/redes_split.jpg") no-repeat center center;
 	float: left;
+	margin-right: 0.5em;
+}
+.redes li:last-child{
+	margin-right: 0;
+}
+.redes li:nth-child(2){
+	background-position: -41px;
+}
+.redes li:nth-child(3){
+	background-position: -164px;
+}
+.redes li:nth-child(4){
+	background-position: 0;
 }
 #tarja-branca .newsletter{
-	float: right;
+	/*float: right;*/
+}
+.newsletter .tb-title{
+	margin-top: 0.5em;
 }
 #creditos{
+	font-size: .75em;
 	width: 100%;
 	background-color: #494949;
 	clear: both;
 	color: white;
-	padding: 0.5em;
+	padding: 1em 1.5em;
+}
+#creditos>small{
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	font-weight: bolder;
+}
+#creditos>small>span{
+	margin-left: 0.6em;
+	padding-left: 0.4em;
+	border-left: 1px solid rgba(255,255,255,0.3);
+	font-weight: normal;
 }
 #creditos>p{
-	float: right;
+	text-align: center;
+	margin-top: 5px;
 }
 #creditos>p>a{
 	color: white;
+}
+@media (min-width: 34em) { 
+	#tarja-branca div.redes{
+		text-align: left;
+		width: auto;
+		float:left;
+	}
+	#tarja-branca div.newsletter{
+		float: right;
+		width: auto;
+	}
+	#tarja-branca 
+	#tarja-branca .newsletter .tb-title{
+		text-align: right;
+		width: auto;
+		margin-top: 0;
+	}
+	#creditos>small>span{
+		margin-left: 0.4em;
+	}
+	footer{
+		font-size: 1em;
+	}
+	#creditos{
+
+		padding: 1em 1.5em;
+	}
+	#creditos>small{
+		width: auto;
+	}
+	#creditos>p{
+		margin-top: 0;
+		float: right;
+	}
+	#tarja-branca{
+		padding: 1em 1.5em;
+	}
+}
+@media (min-width: 62em) { 
+
 }

@@ -1142,11 +1142,13 @@ label[for=ncf_subscriber] {
 .ncf-icon-left-1:before { content: '\e818'; } /* 'î ˜' */
 .ncf-icon-right-1:before { content: '\e819'; } /* 'î ™' */
 
+body.ncf_hidden .nks_cc_trigger_tabs.ncf_tab{
+   top: auto!important;
+}
 .nks_cc_trigger_tabs.ncf_tab {
     display: none;
     position: absolute;
     left: 2.5%;
-    top: auto!important;
     margin-top: 0;
     bottom:0;
     cursor: pointer;
@@ -1249,7 +1251,8 @@ body:not('.ncf_hidden') .nks_cc_trigger_tabs .fa-3x.ncf-tab-icon .fa-stack-1x:be
 }
 
 /*modificado*/
-.nks_cc_trigger_tabs.fixed{
+
+body.ncf_hidden .nks_cc_trigger_tabs.fixed{
     position: fixed!important;
     top: 18%!important;
     bottom: auto;
@@ -1295,7 +1298,6 @@ body:not('.ncf_hidden') .nks_cc_trigger_tabs .fa-3x.ncf-tab-icon .fa-stack-1x:be
 }
 .ncf_exposed .nks_cc_trigger_tabs.ncf_tab{
     position: fixed;
-    top: 55%!important;
     left: 0%!important;
 }
 .ncf_exposed

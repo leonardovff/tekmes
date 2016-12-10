@@ -54,13 +54,18 @@ var contato = {
 };
 var portfolio = {
 	el: null,
+	windowWidth: null,
 	init: function(){
 		portfolio.el = $("#scrolling>ul");
 		portfolio.el.itemslide();
+		portfolio.windowWidth = $(window).width();
 	},
 	resize: function(){
-		portfolio.el.removeAttr("style");
-		portfolio.el.reload();
+		if(portfolio.windowWidth != $(window).width()){
+			portfolio.el.removeAttr("style");
+			portfolio.el.reload();
+			portfolio.windowWidth = $(window).width();
+		}
 	}
 }
 var menu = {

@@ -43,11 +43,14 @@
     bottom: auto;
 
 }
+.card-content-bottom{
+    display: inline-block;
+}
 .card-time{
     text-transform: uppercase;
     font-weight: lighter;
     line-height: 2.8;
-    font-size: 0.7em;
+    font-size: 0.6em;
 }
 .card-item .card-content{
     overflow: auto;
@@ -69,8 +72,8 @@
 .card-item .btn-action{
     float:left;
 }
-.card-content>div{
-    padding-left: 0.5em;
+.card-content-bottom>.btn-action{
+    margin-left: 0.8em;
 }
 
 .card-item.itemslide-active .card-content p{
@@ -114,14 +117,11 @@
         font-size: 1.1em;
     }
 
-    .card-item{
-        width: 7%;
-    }
     #scrolling {    
         margin-top: 1.5em;
     }
     .list-cards .card-item{
-        width: 6%;
+        width: 7%;
         margin-left: 2em;
     }
 } 

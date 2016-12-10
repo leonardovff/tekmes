@@ -10,7 +10,7 @@ header nav{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 102;
+    z-index: 100001;
     box-shadow: 0 0.1em 0.7em rgba(0,0,0,.7);
 }
 h1{

@@ -1,5 +1,5 @@
 .list-sobre{
-	font-size:0.65em;
+	font-size:0.5em;
 	width: 100%;
 }
 .ls-nav{
@@ -9,12 +9,13 @@
 	overflow: auto;
 }
 .ls-nav>ul{
+	display: table;
 	width: 100%;
 	margin: 0 auto;
 }
 .ls-nav>ul>li{
+	display: table-cell;
 	text-align: center;
-	float:left;
 	width: 25%;
 }
 .ls-nav>ul>li>a,
@@ -22,9 +23,9 @@
 	font-family: "Candara";
 }
 .ls-nav>ul>li>a{
-	padding: 1.45em 0;
+	padding: 1.4em 1.1em;
 	display: inline-block;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	color: white;
 	text-transform: uppercase;
 }
@@ -71,7 +72,7 @@ li.ls-nav-atual>a{
 }
 @media (min-width: 34em) { 
 	.list-sobre{
-		font-size: 0.76em;
+		font-size: 0.75em;
 	}
 	.ls-nav>ul{
 		width: 75%;
@@ -80,8 +81,16 @@ li.ls-nav-atual>a{
 	.ln-msg{
 		width: 88%;
 	}
+
+
 }
 @media (min-width: 62em) { 
+	.ls-nav>ul>li>a{
+		font-size: 1em;
+	}
+	.ls-nav>ul>li>a{
+		padding: 2em 1.1em;
+	}
 	.list-sobre{
 		font-size: 1em;
 	}

@@ -3,18 +3,25 @@
     font-family: "Signika Negative";
 }
 .card-item{
-    width: 8%;
+    width: 9%;
     border-radius: 0.4em;
     background-color: white;
     overflow: hidden;
-    -webkit-transform: scale(0.79) translateY(14%);
-    -ms-transform: scale(0.79) translateY(14%);
-    -moz-transform: scale(0.79) translateY(14%);
-    transform: scale(0.79) translateY(14%);
+    -webkit-transform: scale(0.88) translateY(14%);
+    -ms-transform: scale(0.88) translateY(14%);
+    -moz-transform: scale(0.88) translateY(14%);
+    transform: scale(0.88) translateY(14%);
     border-bottom: 1px solid #DFDFDF;
     float: left;
     box-shadow: 0 0.5em 0.6em 0 rgba(10, 10, 10, 0.04 );
     cursor: zoom-in;
+}
+.card-item.itemslide-active{
+    cursor: pointer;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
 }
 .card-item .card-img{
     position: relative;   
@@ -46,7 +53,10 @@
     color: #494949;
 }
 .card-item.itemslide-active .card-content{
-    padding: 1.5em 0 3.2em;
+    padding: 1em 0 3em;
+}
+.card-item .btn-action{
+    font-size: 0.7em;
 }
 .card-item .card-img img{
     width: 100%;
@@ -99,34 +109,40 @@
 }
 /* end - Carousel Frame */
 
-.card-item.itemslide-active{
-    cursor: pointer;
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    -moz-transform: scale(0.9);
-    transform: scale(0.9);
-}
-
 @media (min-width: 34em) {
     .list-cards{
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
     .card-item{
         width: 7%;
     }
     #scrolling {    
-        margin-top: 1em;
+        margin-top: 1.5em;
     }
-} 
-
-@media (min-width: 50em) { 
     .list-cards .card-item{
         width: 6%;
         margin-left: 2em;
     }
+} 
+
+@media (min-width: 50em) { 
+    
+    .card-item.itemslide-active .card-content{
+        padding: 1em .3em 3.2em 0;
+    }   
 }
 @media (min-width: 62em) { 
+    
+    .card-item.itemslide-active .card-content{
+        padding: 1em 0 3.4em 0;
+    }   
+    .card-item .btn-action{
+        font-size: 0.8em;
+    }
+    .card-time{
+        line-height: 3.4;
+    }
 	.list-cards .card-item{
 		width: 5%;
 	}

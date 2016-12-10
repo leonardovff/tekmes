@@ -36,23 +36,26 @@ footer{
 	display: inline-block;
 }
 .redes li{
+	float: left;
+	margin-right: 0.5em;
+}
+.redes li>a{
 	width: 35px;
 	height: 35px;
 	text-indent: -99999px;
 	background: url("../img/redes_split.jpg") no-repeat center center;
-	float: left;
-	margin-right: 0.5em;
+	display: inline-block;
 }
 .redes li:last-child{
 	margin-right: 0;
 }
-.redes li:nth-child(2){
+.redes li:nth-child(2)>a{
 	background-position: -41px;
 }
-.redes li:nth-child(3){
+.redes li:nth-child(3)>a{
 	background-position: -164px;
 }
-.redes li:nth-child(4){
+.redes li:nth-child(4)>a{
 	background-position: 0;
 }
 #tarja-branca .newsletter{

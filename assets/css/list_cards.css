@@ -50,10 +50,11 @@
     font-size: 0.7em;
 }
 .card-item .card-content{
+    overflow: auto;
     color: #494949;
 }
 .card-item.itemslide-active .card-content{
-    padding: 1em 0 3em;
+    padding: 1em 0 1.1em;
 }
 .card-item .btn-action{
     font-size: 0.7em;
@@ -128,16 +129,12 @@
 @media (min-width: 50em) { 
     
     .card-item.itemslide-active .card-content{
-        padding: 1em .3em 3.2em 0;
+        padding: 1em .4em 1.1em 0;
     }   
 }
 @media (min-width: 62em) { 
-    
-    .card-item.itemslide-active .card-content{
-        padding: 1em 0 3.4em 0;
-    }   
     .card-item .btn-action{
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
     .card-time{
         line-height: 3.4;
@@ -145,4 +142,10 @@
 	.list-cards .card-item{
 		width: 5%;
 	}
+}
+
+@media (min-width: 70em) { 
+    .card-item .btn-action{
+        font-size: 0.8em;
+    }
 }

@@ -58,6 +58,7 @@
 	padding: 0.65em 0.8em;
 }
 .input-with-send>.iws-send{
+	cursor: pointer;
 	background-color: #990000;
 }
 /*pagination*/

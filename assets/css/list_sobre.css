@@ -37,7 +37,7 @@ li.ls-nav-atual>a{
 	width: 400%;
 }
 .ls-item{
-	padding: 7em 0;
+	padding: 8em 0;
  	background-color: #616161;
  	font-family: "Signika Negative";
 	float: left;
@@ -57,9 +57,9 @@ li.ls-nav-atual>a{
 }
 .ln-msg{
 	width: 90%;
-	line-height: 1.2;
-	text-align: center;
+	line-height: 1.3;
 	color: white;
+	text-align: justify;
 	font-size: 1.5em;
 	margin: 0 auto;
 }
@@ -78,7 +78,7 @@ li.ls-nav-atual>a{
 		margin: 0 auto;
 	}
 	.ln-msg{
-		width: 88%;'
+		width: 88%;
 	}
 }
 @media (min-width: 62em) { 
@@ -86,6 +86,9 @@ li.ls-nav-atual>a{
 		font-size: 1em;
 	}
 	.ln-msg{
+		line-height: 1.5;
+		text-align: center;
+		width: 60%;
 		font-size: 1em;
 	}
 }

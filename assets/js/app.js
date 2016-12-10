@@ -10,6 +10,7 @@ app = {
 	pageResize: function(){
 		setTimeout(function(){
 			contato.top = $('header section').offset().top+$('header section').outerHeight()-($('header h1').outerHeight()*2.5);
+			contato.position();
 		},200);
 		var lnItem = $(".ln-item"),
 		lnItemWidth = $(lnItem[0]).outerWidth();
@@ -18,9 +19,10 @@ app = {
 			$(this).css('height',lnItemWidth*perc+"px");
 		});
 		$('body').css("paddingTop", ($("header nav h1").outerHeight()-1)+"px");
-		$(window).scroll($.throttle(100, contato.position));
+		portfolio.resize();
 	},
 	setEvents : function(){
+		$(window).scroll($.throttle(100, contato.position));
 		get.item('.btn-menu').addEventListener('click', function(el){ 
 			get.item(".menu-nav").className = get.item(".menu-nav").className.indexOf("mobile-active")!= -1?
 			"menu-nav":"menu-nav mobile-active";			
@@ -31,7 +33,7 @@ app = {
 		$("body").on('click','header nav li',menu.click);
 	},
 	init: function(){
-		$("#scrolling>ul").itemslide();
+		portfolio.init();
 	    app.pageResize();
 		app.setEvents();
 	}
@@ -50,6 +52,17 @@ var contato = {
         }
     }
 };
+var portfolio = {
+	el: null,
+	init: function(){
+		portfolio.el = $("#scrolling>ul");
+		portfolio.el.itemslide();
+	},
+	resize: function(){
+		portfolio.el.removeAttr("style");
+		portfolio.el.reload();
+	}
+}
 var menu = {
 	click: function(){
 		if($(this).hasClass("active")) return false;

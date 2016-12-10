@@ -1,3 +1,4 @@
+/*btn*/
 .btn-action{
 	font-family: "Candara";
 	font-size: 12px;
@@ -26,6 +27,7 @@
 	vertical-align: middle;
 	padding: 0 1.5em;
 }
+/* input */
 .input-with-send{
 	display: table;
 	overflow: hidden;
@@ -57,4 +59,26 @@
 }
 .input-with-send>.iws-send{
 	background-color: #990000;
+}
+/*pagination*/
+.pg-list{
+	display: inline-block;
+}
+.pg-item{
+	float: left;
+}
+.pg-item>a{
+	background-color: white;
+	height: 11px;
+	width: 11px;
+	margin-left: 0.5em;
+	display: inline-block;
+	border-radius: 50%;
+	text-indent: -99999px;
+}
+.pg-item:last-child{
+	margin-left: 0;
+}
+.pg-item.active>a{
+	background: #990000;
 }

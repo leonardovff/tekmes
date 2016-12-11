@@ -9,17 +9,21 @@ var paginator = (function(selector, temporizador){
 	app.setActive = function(index){
 		app.el.find(".pg-item.active").removeClass("active");
 		app.el.find(".pg-item").eq(index).addClass("active");
-		app.resetarIntervalo();
+		if(temporizador){
+			app.resetarIntervalo();
+		}
 	}
 	$('body').on('click', selector+" .pg-item", function(e){
+		e.preventDefault();
+		console.log(app.onChange);
 		if(typeof(app.onChange)==="function"){
 			app.onChange($(e.target).parent().index());
 		}
 	});
 	app.resetarIntervalo = function(){
 		if(app.intervalo != null){
-			clearInterval(app.intervalo);
-			setarIntervalo();
+			clearInterval(app.intervalo)
+;			setarIntervalo();
 		}
 	}
 	function setarIntervalo(){

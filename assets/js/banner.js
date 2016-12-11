@@ -16,10 +16,9 @@ var banner = {
 			banner.el.next();
 		} 
 		banner.pg.onChange = function(index){
-			console.log("entrou - mudança");
 			banner.el.gotoSlide(index);
 		};
-
+		portfolio.windowWidth = $(window).width();
 	},
 	resize: function(){
 		if(portfolio.windowWidth != $(window).width()){

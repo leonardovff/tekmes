@@ -47,6 +47,29 @@ header h3{
 header>section>.pg-list{
 	margin: 1.6em auto 0;
 }
+.scroll-box{
+	overflow: hidden;
+}
+.scroll-box>ul{
+	margin: 0;
+    padding: 0;
+    width: 300%;
+    list-style-type: none;
+    float: left;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.scroll-box>ul>li{
+	float: left;
+	width: 33.333%;
+	/*float: left;*/
+}
+#banner .scroll-box{
+	/*margin-bottom: 4em;*/
+}
 @media (min-width: 34em) { 
 	header>section{
 		padding: 09em 0;

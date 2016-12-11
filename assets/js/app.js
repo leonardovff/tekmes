@@ -20,6 +20,7 @@ app = {
 		});
 		$('body').css("paddingTop", ($("header nav h1").outerHeight()-1)+"px");
 		portfolio.resize();
+		banner.resize();
 		menu.captureDeltaTop();
 	},
 	setEvents : function(){
@@ -37,11 +38,44 @@ app = {
 		$("body").on('click','header nav li',menu.click);
 	},
 	init: function(){
+		banner.init();
 		portfolio.init();
-	    app.pageResize();
+		setTimeout(function(){
+	    	app.pageResize();
+		},200);
 		app.setEvents();
 	}
 };
+var banner = {
+	pg: paginator('#banner', true),
+	windowWidth: null,
+	el: null,
+	init: function(){
+		banner.el = $(".scroll-box>ul");
+		banner.el.itemslide();
+		banner.el.on('changeActiveIndex',function(){
+			banner.pg.setActive(banner.el.getActiveIndex());
+		});
+		banner.pg.nextFunction = function(){
+			if(banner.el.children('li').length-1 == banner.el.getActiveIndex()){
+				banner.el.gotoSlide(0);
+			}
+			banner.el.next();
+
+		} 
+		banner.pg.onChange = function(index){
+			banner.el.gotoSlide(index);
+		};
+
+	},
+	resize: function(){
+		if(portfolio.windowWidth != $(window).width()){
+			portfolio.el.removeAttr("style");
+			portfolio.el.reload();
+			portfolio.windowWidth = $(window).width();
+		}
+	}
+}
 var contato = {
 	top: null,
 	position: function() {

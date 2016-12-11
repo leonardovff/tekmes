@@ -82,8 +82,9 @@ li.ls-nav-atual>a{
 		font-size: 1.4em;
 		width: 88%;
 	}
-
-
+	.ls-title{
+		font-size: 1.4em;
+	}
 }
 @media (min-width: 62em) { 
 	.ls-nav>ul>li>a{

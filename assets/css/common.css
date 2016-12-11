@@ -61,6 +61,19 @@
 	cursor: pointer;
 	background-color: #990000;
 }
+.iws-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  	color: white;
+}
+.iws-input::-moz-placeholder { /* Firefox 19+ */
+  	color: white;
+}
+.iws-input:-ms-input-placeholder { /* IE 10+ */
+  	color: white;
+}
+.iws-input:-moz-placeholder { /* Firefox 18- */
+  	color: white;
+}
+
 /*pagination*/
 .pg-list{
 	display: inline-block;

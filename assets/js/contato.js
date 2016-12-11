@@ -29,8 +29,6 @@
             sending_text: "Enviando",
             success: "Sua mensagem foi enviada com sucesso!"
         };
-    console.log(opts);
-    console.log('entrou');
     var html = {}
     html.flat = '<div id="ncf_sidebar" class="ncf_flat ncf_up_style_theme_custom"><div class="ncf_sidebar_cont_scrollable">';
         html.flat += '<div class="ncf_sidebar_cont ncf_shrinked" style="min-height: 0px;">';

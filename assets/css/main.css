@@ -31,8 +31,13 @@ section#noticias{
 #noticias{
 	background: white;
 }
+#portfolio h3{
+	/*color: white;*/
+}
 #portfolio{
 	background: url("../img/pattern-portfolio.jpg");
+	/*background-color: rgb(180, 116, 116);*/
+	/*color: white;*/
 	text-align: center;
 }
 #portfolio .pg-list{

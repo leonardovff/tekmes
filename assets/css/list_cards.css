@@ -7,14 +7,17 @@
     border-radius: 0.4em;
     background-color: white;
     overflow: hidden;
-    -webkit-transform: scale(0.88) translateY(14%);
-    -ms-transform: scale(0.88) translateY(14%);
-    -moz-transform: scale(0.88) translateY(14%);
-    transform: scale(0.88) translateY(14%);
+    -webkit-transform: scale(0.88);
+    -ms-transform: scale(0.88);
+    -moz-transform: scale(0.88);
+    transform: scale(0.88);
     border-bottom: 1px solid #DFDFDF;
     float: left;
-    box-shadow: 0 0.5em 0.6em 0 rgba(10, 10, 10, 0.04 );
+    box-shadow: 0 0.5em 0.6em 0 rgba(10, 10, 10, 0.04);
     cursor: zoom-in;
+}
+.card-item.itemslide-active img {
+    margin-top: -16%;
 }
 .card-item.itemslide-active{
     cursor: inherit;

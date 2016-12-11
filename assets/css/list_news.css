@@ -24,10 +24,10 @@
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("../img/noticias/item_2.png"); 
 }
 .ln-item:nth-child(3n){
-	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("../img/noticias/item_3.jpg"); 
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("../img/noticias/item_1.png"); 
 }
 .ln-item:nth-child(4n){
-	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("../img/noticias/item_1.png"); 
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("../img/noticias/item_3.jpg"); 
 }
 .ln-item:nth-child(5n){
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("../img/noticias/item-5.jpg"); /* W3C */; 

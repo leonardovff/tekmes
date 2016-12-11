@@ -20,9 +20,13 @@ app = {
 		});
 		$('body').css("paddingTop", ($("header nav h1").outerHeight()-1)+"px");
 		portfolio.resize();
+		menu.captureDeltaTop();
 	},
 	setEvents : function(){
-		$(window).scroll($.throttle(100, contato.position));
+		$(window).scroll($.throttle(100, function(){
+			contato.position();
+			menu.scrolled();
+		}));
 		get.item('.btn-menu').addEventListener('click', function(el){ 
 			get.item(".menu-nav").className = get.item(".menu-nav").className.indexOf("mobile-active")!= -1?
 			"menu-nav":"menu-nav mobile-active";			
@@ -69,13 +73,54 @@ var portfolio = {
 	}
 }
 var menu = {
-	click: function(){
+	deltaTop: [],
+	captureDeltaTop: function(){
+		var arr = [];
+		$('.menu-nav a').each(function () {
+			var hash = this.getAttribute('href').substring(1);
+			arr.push({
+				index: hash,
+				distancia: $('section>a[name="'+hash+'"]').offset().top 
+			});
+	    });
+	    menu.deltaTop = arr;
+	},
+	scrolled: function(){
+		if($(".menu-nav.inMoving").length !== 0) return false;
+		var atual = null;
+		$(menu.deltaTop).each(function(){
+			if($(document).scrollTop()+(2*$('header nav').outerHeight()) >= this.distancia){				
+				atual = this;
+			}
+		});
+		if(atual == null) return false;
+		menu.selectMenu($('.menu-nav li>a[href="#'+atual.index+'"]').parent('li'));
+	},
+	click: function(e){
+		e.preventDefault();
+		var hash = e.target.getAttribute('href').substring(1);
+		menu.mover(hash);
+		menu.selectMenu(this);
+	},
+	selectMenu(el){
 		if($(this).hasClass("active")) return false;
 		if($(".menu-nav").hasClass("mobile-active")){
 			$(".menu-nav").removeClass("mobile-active")
 		}
-		$("header nav li.active").removeClass('active');
-		$(this).addClass('active');	
+		$(".menu-nav li.active").removeClass('active');
+		$(el).addClass('active');	
 	},
+	mover: function(hash){
+		var el = $("a[name='"+hash+"']").parent('section'),
+		body = $("html, body"),
+		deltaTop = $(window).scrollTop()-(el.offset().top-$('header h1').outerHeight());
+		deltaTop = parseInt(deltaTop/1000);
+		deltaTop = deltaTop<0?deltaTop*-1:deltaTop;
+		var tempoAnimacao = (deltaTop+1)*1000;
+		$('.menu-nav').addClass('inMoving');
+		body.stop().animate({scrollTop:el.offset().top-$('header h1').outerHeight()}, tempoAnimacao, 'swing', function() { 
+			$('.menu-nav').removeClass('inMoving');
+		});
+	}
 }
 window.onload = app.init();

@@ -65,6 +65,11 @@ nav .btn-menu{
 	text-transform: uppercase;
 	font-family: "Candara";
 	font-size:1em;
+
+	-webkit-backface-visibility: hidden;
+    transition: background-color 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), border-width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: .1s;
+    -webkit-transition-delay: .1s;
 }
 .menu-nav ul li>a{
 	padding: 1.2em 0;
@@ -82,7 +87,7 @@ nav .btn-menu{
 .menu-nav ul li.active{
 	border-bottom: 0.1em solid rgba(132, 10, 10, 0.55);
 	border-top: 0.1em solid rgba(132, 10, 10, 0.55);
-	background: #f36060;
+	background: #f36060; 
 }
 @media (min-width: 62em) { 
 	h1{

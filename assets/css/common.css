@@ -96,3 +96,21 @@
 .pg-item.active>a{
 	background: #990000;
 }
+
+/*item - slider*/
+.scroll-box{
+	overflow: hidden;
+}
+.scroll-box>ul{
+	margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.scroll-box>ul>li{
+	float: left;
+}

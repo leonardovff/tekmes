@@ -21,6 +21,7 @@ app = {
 		$('body').css("paddingTop", ($("header nav h1").outerHeight()-1)+"px");
 		portfolio.resize();
 		banner.resize();
+		sobre.resize();
 		menu.captureDeltaTop();
 	},
 	setEvents : function(){
@@ -40,6 +41,7 @@ app = {
 	init: function(){
 		banner.init();
 		portfolio.init();
+		sobre.init();
 		setTimeout(function(){
 	    	app.pageResize();
 		},200);

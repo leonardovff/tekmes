@@ -3,7 +3,7 @@ var banner = {
 	windowWidth: null,
 	el: null,
 	init: function(){
-		banner.el = $(".scroll-box>ul");
+		banner.el = $("#banner .scroll-box>ul");
 		banner.el.itemslide();
 		banner.el.on('changeActiveIndex',function(){
 			banner.pg.setActive(banner.el.getActiveIndex());
@@ -18,13 +18,13 @@ var banner = {
 		banner.pg.onChange = function(index){
 			banner.el.gotoSlide(index);
 		};
-		portfolio.windowWidth = $(window).width();
+		banner.windowWidth = $(window).width();
 	},
 	resize: function(){
-		if(portfolio.windowWidth != $(window).width()){
-			portfolio.el.removeAttr("style");
-			portfolio.el.reload();
-			portfolio.windowWidth = $(window).width();
+		if(banner.windowWidth != $(window).width()){
+			banner.el.removeAttr("style");
+			banner.el.reload();
+			banner.windowWidth = $(window).width();
 		}
 	}
 }

@@ -35,7 +35,7 @@ li.ls-nav-atual>a{
 }
 
 .list-sobre .ls-content{
-	width: 400%;
+	width: 100%;
 }
 .ls-item{
 	padding: 8em 0;
@@ -70,6 +70,16 @@ li.ls-nav-atual>a{
 #item-sobre .btn-action{
 	margin: 2em auto 0;
 }
+/*itemSlider*/
+#sobre .scroll-box>ul{
+    width: 400%!important;
+    text-align: center;
+}
+#sobre .scroll-box>ul>li{
+	width: 25%;
+}
+/* end - itemSlider*/
+
 @media (min-width: 34em) { 
 	.list-sobre{
 		font-size: 0.75em;

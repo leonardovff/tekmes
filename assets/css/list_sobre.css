@@ -70,6 +70,35 @@ li.ls-nav-atual>a{
 #item-sobre .btn-action{
 	margin: 2em auto 0;
 }
+.equipe-membro>img{
+	border: 2em solid #aaa9a9;
+	border-radius: 50%;
+	width: 40%;
+}
+.equipe-nome{
+	margin: 1em 0 2.5em;
+	color: white;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	line-height: 1.2;
+	position: relative;
+}
+.equipe-nome>h4{
+	text-transform: initial;
+	font-size: 1.7em;
+}
+.equipe-nome::after {	
+	position: absolute;
+	content: "";
+	width: 10%;
+	left: 50%;
+	bottom: -0.55em;
+	border: solid #bf8f00;
+	border-width: 0.15em 0 0;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 /*itemSlider*/
 #sobre .scroll-box>ul{
     width: 400%!important;
@@ -95,6 +124,10 @@ li.ls-nav-atual>a{
 	.ls-title{
 		font-size: 1.4em;
 	}
+	.equipe-membro>img{
+		width: 20%;
+		border-width: 1.4em;
+	}
 }
 @media (min-width: 62em) { 
 	.ls-nav>ul>li>a{
@@ -111,5 +144,8 @@ li.ls-nav-atual>a{
 		text-align: center;
 		width: 60%;
 		font-size: 1em;
+	}
+	.equipe-membro>img{
+		width: 15%;
 	}
 }

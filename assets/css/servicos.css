@@ -1,0 +1,61 @@
+.headerInside{
+	position: relative;
+	clear:both;
+	text-align: center;
+	background: url("../img/produtos_servicos/banner.jpg") no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	padding: 10em 0;	
+	font-family: "Montserrat";
+}
+.headerInside-back{
+	position: absolute;	
+	top: 2%;
+	left: 2%;
+}
+.headerInside-title{
+	margin-bottom: 1.2em;
+	position: relative;
+	font-size: 4.5em;
+	color: white;
+  	text-transform: uppercase;
+  	line-height: 1.098;
+  	text-align: center;
+  	text-shadow: 0.06em 0.09em 0.2px rgba(10, 10, 10, 0.2);
+}
+.headerInside-title::before,
+.headerInside-title::after
+{	position: absolute;
+	content: "";
+	width: 25%;
+	left: 50%;
+	top: -0.55em;
+	border: solid #bf8f00;
+	border-width: 0.11em 0 0;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.headerInside-title::after{
+	top: auto;
+	bottom: -0.35em;
+}
+.view-servico main>div{
+	width:50%;
+	float: left;
+ 	padding: 30px;
+}
+
+.footerFixed{
+	border: 4px solid red;
+}
+
+.footerFixed{
+	position: fixed;
+	width: 100%;
+    bottom: 0;
+    background-color: #b3b3b3;
+    color: white;
+    text-align: center;
+   	padding: 5%;
+}

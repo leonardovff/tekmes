@@ -1,3 +1,6 @@
+body{
+	padding-top: 8%; /*defualt - offjs */
+}
 header{
 	position: relative;
 	color:white;

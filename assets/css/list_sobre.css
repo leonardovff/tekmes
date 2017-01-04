@@ -72,6 +72,7 @@ li.ls-nav-atual>a{
 }
 .equipe-membro>img{
 	border: 2em solid #aaa9a9;
+    box-shadow: 0em 0em 1.5em rgba(0,0,0,0.1);
 	border-radius: 50%;
 	width: 40%;
 }

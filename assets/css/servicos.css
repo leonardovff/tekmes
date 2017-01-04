@@ -7,8 +7,6 @@ html {
 	min-height: 100%;
 	height: 100%;
 }
-
-
 .contentInternal{
 	position: relative;
 	z-index: 101;

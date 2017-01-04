@@ -12,15 +12,22 @@
 	padding: 7em 0;	
 	font-family: "Montserrat";
 }
-.headerInside-back{
-	position: fixed;
-    top: 2%;
-    left: 2%;
+.headerInside-navbar{
+	width: 100%;
+	z-index: 101;
+	position: absolute;
+    top: 0%;
+    left: 0%;
 }
-.headerInside-back .btn{
+.headerInside-navbar--show{
+	background: red;
+}
+.headerInside-navbar-back{
 	color:white;
+	float: left;
+	padding: 0.8em;
 }
-.headerInside-back .material-icons{
+.headerInside-navbar-back .material-icons{
 	vertical-align: middle;
 }
 .headerInside-title{

@@ -9,12 +9,16 @@
 	<!–[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<![endif]–>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Rajdhani:300,400,600|Lato:300normal,400normal,400italic,600normal&subset=all' rel='stylesheet' type='text/css'>
 	<link href="//fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/app.css"> 
-	<link rel="stylesheet" type="text/css" href="assets/css/servicos.css"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/servicos.css">
+	<link rel="stylesheet" href="bower_components/medium-editor/dist/css/medium-editor.min.css">
+	<link rel="stylesheet" href="bower_components/medium-editor/dist/css/themes/default.css">
+	<link rel="stylesheet" href="bower_components/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css">
 </head>
 <body class="view-servico">
     <header class="headerInside">
@@ -22,15 +26,31 @@
         <h2 class="headerInside-title">Digitalização 3D</h2>
     </header>
 	<main>
-		<div>kopkopk</div>
-		<div>kpokokpo</div>
+		<div class="editable">kopkopk</div>
+		<div class="editable">kpokokpo</div>
     </main>
     <footer class="footerFixed">
        <p>Se interessou  ou está com dúvida?</p>
     </footer>
     <!-- INCLUSÃO DE JS -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/medium-editor/dist/js/medium-editor.js"></script>
+	<script src="bower_components/handlebars/handlebars.runtime.min.js"></script>
+	<script src="bower_components/jquery-sortable/source/js/jquery-sortable-min.js"></script>
+	<script src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+	<script src="bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+	<script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+	<script src="bower_components/medium-editor-insert-plugin/dist/js/medium-editor-insert-plugin.min.js"></script>
     <!-- <script type="text/javascript" src="assets/js/app.js"></script> -->
+    <script>
+    	var editor = new MediumEditor('.editable');
+		$(function () {
+		    $('.editable').mediumInsert({
+		        editor: editor
+		    });
+		});
+    </script>
     <!-- end - INCLUSÃO DE JS -->
 </body>
 </html>

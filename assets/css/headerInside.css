@@ -1,0 +1,74 @@
+.headerInside{
+    font-size: 14px;
+	position: fixed;
+	clear:both;
+	top:0;
+	left:0;	
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.48), transparent),url(../img/produtos_servicos/banner.jpg) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	width: 100%;
+	padding: 7em 0;	
+	font-family: "Montserrat";
+}
+.headerInside-back{
+	position: absolute;	
+	top: 2%;
+	left: 2%;
+}
+.headerInside-title{
+	position: relative;
+	font-size: 2.5em;
+	color: white;
+  	text-transform: uppercase;
+  	line-height: 1.098;
+  	text-align: center;
+  	text-shadow: 0.06em 0.09em 0.2px rgba(10, 10, 10, 0.2);
+}
+.headerInside-title::before,
+.headerInside-title::after
+{	position: absolute;
+	content: "";
+	width: 25%;
+	left: 50%;
+	top: -0.4em;
+	border: solid #bf8f00;
+	border-width: 0.11em 0 0;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.headerInside-title::after{
+	top: auto;
+	bottom: -0.4em;
+}
+@media (min-width: 34em) { 
+	.headerInside{
+		padding: 6em 0;
+	}
+	.headerInside-title{
+		font-size: 2.4em;
+	}
+	.headerInside-title::before,
+	.headerInside-title::after{
+		width: 15%;	
+	}
+}
+@media (min-width: 62em) { 
+	.headerInside{
+		padding: 10em 0;
+	}
+	.headerInside-title{
+		font-size: 4em;
+	}
+	.headerInside-title::before,
+	.headerInside-title::after{
+		top: -0.4em;
+		border-width: 0.1em 0 0;
+		width: 20%;
+	}
+	.headerInside-title::after{
+		top: auto;
+		bottom: -0.2em;
+	}
+}

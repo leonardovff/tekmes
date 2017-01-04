@@ -6,7 +6,10 @@
 
 
 .contentInternal{
+	position: relative;
+	z-index: 101;
 	background: white;	
+	overflow: auto;
 }
 .view-servico .contentInternal>div{
 	width:50%;

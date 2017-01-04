@@ -1,7 +1,11 @@
 @import "headerInside.css";
-
+html {
+  height: 100%;
+}
 .view-servico{
-	padding-top: 40%;
+	position: relative;
+	min-height: 100%;
+	height: 100%;
 }
 
 
@@ -17,11 +21,14 @@
  	padding: 30px;
 }
 .footerContact{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
+	clear: both;
+    position: relative;
+    width: 100%;
+	z-index: 101;
     background-color: #b3b3b3;
     color: white;
     text-align: center;
    	padding: 5%;
 }
+html, body, .contentInternal { height: 100%; }
+body > .contentInternal { height: auto; min-height: 100%; }

@@ -1,11 +1,11 @@
 body{
 	padding-top: 8%; /*defualt - offjs */
 }
-header{
+.header{
 	position: relative;
 	color:white;
 }
-header>section{
+.header>section{
 	clear:both;
 	text-align: center;
 	background: url("../img/banner.jpg") no-repeat center center;
@@ -14,7 +14,7 @@ header>section{
 	padding: 5em 0;	
 	font-family: "Montserrat";
 }
-header h2{
+.header h2{
 	margin-bottom: 1.2em;
 	position: relative;
 	font-size: 1.56em;
@@ -23,8 +23,8 @@ header h2{
   	text-align: center;
   	text-shadow: 0.06em 0.09em 0.2px rgba(10, 10, 10, 0.2);
 }
-header h2::before,
-header h2::after
+.header h2::before,
+.header h2::after
 {	position: absolute;
 	content: "";
 	width: 35%;
@@ -36,18 +36,18 @@ header h2::after
 	-ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-header h2::after{
+.header h2::after{
 	top: auto;
 	bottom: -0.35em;
 }
-header h3{
+.header h3{
 	width: 90%;
 	text-shadow: 0 0 0.7em rgba(0,0,0,0.7);
 	margin: 0 auto;
 	line-height: 1.3;
 	font-size: 0.9em;
 }
-header>section>.pg-list{
+.header>section>.pg-list{
 	margin: 1.6em auto 0;
 }
 #banner .scroll-box>ul{
@@ -57,39 +57,39 @@ header>section>.pg-list{
     width: 33.333%;
 }
 @media (min-width: 34em) { 
-	header>section{
+	.header>section{
 		padding: 09em 0;
 	}
-	header h2{
+	.header h2{
 		font-size: 2.4em;
 	}
-	header h3{
+	.header h3{
 		font-size: 1em;
 	}
-	header h2::before,
-	header h2::after{
+	.header h2::before,
+	.header h2::after{
 		width: 15%;	
 	}
 }
 @media (min-width: 62em) { 
-	header>section{
+	.header>section{
 		padding: 15em 0;
 	}
-	header h2{
+	.header h2{
 		margin-bottom: 0.7em;
 		font-size: 4em;
 	}
-	header h3{
+	.header h3{
 		width: 70%;
 		font-size: 1.2em;
 	}
-	header h2::before,
-	header h2::after{
+	.header h2::before,
+	.header h2::after{
 		top: -0.4em;
 		border-width: 0.1em 0 0;
 		width: 20%;
 	}
-	header h2::after{
+	.header h2::after{
 		top: auto;
 		bottom: -0.2em;
 	}

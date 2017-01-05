@@ -1,0 +1,33 @@
+.footerContact{
+	font-family: "Montserrat";
+	clear: both;
+    position: relative;
+    width: 100%;
+	z-index: 101;
+	font-size: 14px;
+    background-color: #b3b3b3;
+    color: white;
+    text-align: center;
+    color: white;
+   	padding: 4%;
+}
+.footerContact-content p{
+	padding-bottom: 1em;
+}
+@media (min-width: 34em) { 
+	.footerContact{
+	   	padding: 2%;
+	}
+	.footerContact-content{
+		vertical-align: middle;
+		display: table;
+		margin: 0 auto;
+	}
+	.footerContact-content p{
+		display: table-cell;
+		vertical-align: middle;
+		color:white;
+		padding-right: 1em;
+		padding-bottom: 0;
+	}
+}

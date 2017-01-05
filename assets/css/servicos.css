@@ -1,4 +1,5 @@
 @import "headerInside.css";
+@import "footerContact.css";
 html {
   height: 100%;
 }
@@ -7,7 +8,11 @@ html {
 	min-height: 100%;
 	height: 100%;
 }
+.medium-editor-insert-plugin p{
+	margin: 0 !important;
+}
 .contentInternal{
+	font-family: "Candara";
 	position: relative;
 	z-index: 101;
 	background: white;	
@@ -17,16 +22,6 @@ html {
 	width:50%;
 	float: left;
  	padding: 30px;
-}
-.footerContact{
-	clear: both;
-    position: relative;
-    width: 100%;
-	z-index: 101;
-    background-color: #b3b3b3;
-    color: white;
-    text-align: center;
-   	padding: 5%;
 }
 html, body, .contentInternal { height: 100%; }
 body > .contentInternal { height: auto; min-height: 100%; }

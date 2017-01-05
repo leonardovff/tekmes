@@ -10,7 +10,7 @@ footer{
 	z-index: 100;
 }
 header{
-	z-index: 101;
+	/*z-index: 101;*/
 }
 .sz-40{
 	width: 40%;

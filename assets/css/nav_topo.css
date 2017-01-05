@@ -1,4 +1,7 @@
-header nav{
+.header{
+	z-index: 101;
+}
+.header nav{
 	width: 100%;
 	background: #494949;
 	display: -webkit-flex;

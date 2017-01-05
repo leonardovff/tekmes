@@ -6,7 +6,7 @@ var navbar = {
         navbar.height = navbar.el.outerHeight();
     },
     changeStatus: function(){
-        if($(window).scrollTop() >= $('.headerInside').outerHeight()-navbar.height) {
+        if($(window).scrollTop() >= $('.headerInside-banner').outerHeight()-navbar.height) {
             return navbar.el.addClass('headerInside-navbar--show');
         }
         if(navbar.el.hasClass('headerInside-navbar--show')){
@@ -16,10 +16,11 @@ var navbar = {
 }
 var app = {
 	pageResize: function(){
+        console.log('entrou');
         navbar.captureHeight();
         
-		$('.view-servico').css("paddingTop", ($(".headerInside").outerHeight()-1)+"px");
-		$('.view-service').css("paddingBottom", ($(".footerContact").outerHeight()-1)+"px");
+		$('.view-servico').css("paddingTop", ($(".headerInside-banner").outerHeight()-1)+"px");
+		$('.view-servico').css("paddingBottom", ($(".footerContact").outerHeight()-1)+"px");
     },
 	setEvents : function(){
 		$(window).scroll($.throttle(100, function(){
@@ -33,10 +34,22 @@ var app = {
         navbar.changeStatus();
     },
 	init: function(){
-		setTimeout(function(){
-	    	app.pageResize();
-		},200);
 		app.setEvents();
+
+        var editorSimples = new MediumEditor('.editableSimple',{
+            toolbar: false
+        });
+        $('.editable').each(function () {
+            var editor = new MediumEditor($(this).get(0));
+            $(this).mediumInsert({
+                editor: editor
+            });
+            editor.setContent("Digite seu texto aqui");
+        });    
+        editorSimples.setContent("Digite seu titulo aqui");
+        setTimeout(function(){
+            app.pageResize();
+        },200);
 	}
 };
 window.onload = app.init();

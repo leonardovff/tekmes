@@ -1,5 +1,8 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef,  } from '@angular/core';
+
+import { WindowService } from '../../service/window.service';
 declare var $:any;
+
 @Component({
   selector: 'tk-header',
   templateUrl: './header.component.html',
@@ -9,7 +12,6 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('sliderText') sliderText:ElementRef;
   @ViewChild('pagination') pg;
-
   windowWidth = null;
 	el = null;
   texts = [
@@ -17,7 +19,13 @@ export class HeaderComponent implements OnInit {
     'A TEKMES oferece SOLUÇÕES 3D INOVADORAS e abrangentes que podem ajudar os seus clientes a enfrentar os desafios atuais.',
     'A TEKMES oferece SOLUÇÕES 3D INOVADORAS e abrangentes que podem ajudar os seus clientes a enfrentar os desafios atuais existentes no desenvolvimento, controle da qualidade e representação 3D do produto.'
   ]
-  constructor() { }
+  constructor(private windowService: WindowService) {
+      windowService.width$.subscribe((value:any) => {
+          //Do whatever you want with the value.
+          //You can also subscribe to other observables of the service
+          this.onResize(value);
+      });
+  }
 
   ngOnInit() {
 
@@ -34,15 +42,14 @@ export class HeaderComponent implements OnInit {
 	}
 
   changed(index){
-    console.log(index);
     this.el.gotoSlide(index);
   }
 
-	resize(){
-		if(this.windowWidth != $(window).width()){
+	onResize(value){
+		if(this.windowWidth != value && this.el){
 			this.el.removeAttr("style");
 			this.el.reload();
-			this.windowWidth = $(window).width();
+			this.windowWidth = value;
 		}
 	}
 

@@ -30,15 +30,18 @@ export class PaginationComponent implements OnInit {
       this.setInterval();
     }
   }
+
   setActive = function(index){
     this.selectedIndex = index;
 		if(this.temporizador){
 			this.resetInterval();
 		}
 	}
+
   click(index){
 		this.onChange.emit(index);
 	}
+
   resetInterval(){
 		if(this.interval != null){
 			clearInterval(this.interval);

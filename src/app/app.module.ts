@@ -10,6 +10,7 @@ import { PaginationComponent } from './component/pagination/pagination.component
 import { WindowService } from './service/window.service';
 import { ServicesComponent } from './component/services/services.component';
 import { ItemComponent } from './component/services/item/item.component';
+import { TkButtonComponent } from './component/tk-button/tk-button.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ItemComponent } from './component/services/item/item.component';
     ToolbarComponent,
     PaginationComponent,
     ServicesComponent,
-    ItemComponent
+    ItemComponent,
+    TkButtonComponent
   ],
   imports: [
     BrowserModule,

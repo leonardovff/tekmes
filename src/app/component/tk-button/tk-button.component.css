@@ -1,0 +1,28 @@
+.btn-action{
+	font-family: "Candara";
+	font-size: 12px;
+	color: white;
+	background-color: #2a2a2a;
+	border-radius: 0.8em;
+	overflow: hidden;
+	margin: 0 auto;
+	text-align: left;
+	display: table;
+	height: 100%;
+}
+.btn-action>i{
+	height: 100%;
+	font-size: 1.3em;
+	background-color: #990001;
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	padding: 0.65em 0.8em;
+	text-align: center;
+}
+.btn-action>span{
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	padding: 0 1.5em;
+}

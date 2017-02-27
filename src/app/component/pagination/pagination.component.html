@@ -1,0 +1,5 @@
+ <ul #pgList>
+    <li *ngFor="let number of listNumbers"
+    [class.active]="number == selectedIndex"
+    (click)="click(number)"><a href="#">{{number+1}}</a></li>
+  </ul>

@@ -1,0 +1,21 @@
+ul{
+	display: inline-block;
+}
+ul>li{
+	float: left;
+}
+ul>li>a{
+	background-color: white;
+	height: 11px;
+	width: 11px;
+	margin-left: 0.5em;
+	display: inline-block;
+	border-radius: 50%;
+	text-indent: -99999px;
+}
+ul>li:last-child{
+	margin-left: 0;
+}
+ul>li.active>a{
+	background: #990000;
+}

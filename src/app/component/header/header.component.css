@@ -56,6 +56,7 @@ body{
 }
 #banner .scroll-box>ul>li{
     width: 33.333%;
+    float: left;
 }
 @media (min-width: 34em) {
 	.header>section{

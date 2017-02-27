@@ -1,0 +1,26 @@
+<header class="header">
+  <toolbar></toolbar>
+  <section id="banner">
+    <a class="scroll-ancora" name="inicio"></a>
+    <div class="content">
+      <h2>Soluções em<br> Produtos e Processos</h2>
+      <div class="scroll-box">
+        <ul #sliderText>
+          <li *ngFor="let text of texts">
+            <h3>“{{ text }}”</h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <pagination #pagination
+                [temporizador]="true" [total]="3"
+                (onChange)="changed($event)"
+                ></pagination>
+    <div class="nks_cc_trigger_tabs ncf_tab ncf_label_visible" style="display: none;">
+      <span class="fa-stack ncf-tab-icon fa-lg fa-2x">
+        <i class="fa-stack-2x material-icons md-light md-16 btn-open">mail</i>
+        <i class="fa-stack-1x material-icons md-light md-16 fa-inverse btn-close">close</i>
+      </span>
+    </div>
+  </section>
+</header>

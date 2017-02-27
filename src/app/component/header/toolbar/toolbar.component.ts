@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowService } from '../../../service/window.service';
 declare var $:any;
 
 @Component({
@@ -16,14 +17,27 @@ export class ToolbarComponent implements OnInit {
     {url: "noticias", title:"Notícias", actived: false},
     {url: "sobre", title:"Sobre", actived: false}
   ]
-  constructor() { }
+  constructor(private windowService:WindowService) {
+    windowService.width$.subscribe((value:any) => {
+        //Do whatever you want with the value.
+        //You can also subscribe to other observables of the service
+        this.paddingToolbar();
+    });
+  }
+
   ngOnInit() {
   }
   ngAfterViewInit(){
+    this.paddingToolbar();
     $(window).scroll($.throttle(100, () =>{
 			this.scrolled();
 		}));
   }
+
+  paddingToolbar(){
+    $('body').css("paddingTop", ($("header nav h1").outerHeight()-1)+"px");
+  }
+
   toggleMenu(){
     console.log("Entrou");
     this.openedMenuMobile = this.openedMenuMobile?false:true;

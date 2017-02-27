@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { ToolbarComponent } from './component/header/toolbar/toolbar.component';
 import { PaginationComponent } from './component/pagination/pagination.component';
+import { WindowService } from './service/window.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PaginationComponent } from './component/pagination/pagination.component
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [WindowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

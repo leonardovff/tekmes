@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class TekmesPage {
+export class TEKMESPage {
   navigateTo() {
     return browser.get('/');
   }

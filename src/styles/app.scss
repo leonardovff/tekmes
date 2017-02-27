@@ -1,0 +1,53 @@
+@import './reset.scss';
+@import './fonts.scss';
+body{
+	font-size: 14px;
+}
+body, html{
+	width: 100%;
+	min-height: 100%;
+}
+main,
+footer{
+	z-index: 100;
+}
+header{
+	/*z-index: 101;*/
+}
+.sz-40{
+	width: 40%;
+}
+.sz-45{
+	width: 45%;
+}
+.sz-50{
+	width: 50%;
+}
+.sz-55{
+	width: 55%;
+}
+.sz-60{
+	width: 60%;
+}
+.fleft{
+	float: left;
+}
+.fright{
+	float: right;
+}
+.tleft {
+	text-align: left;
+}
+.tag{
+	background-color: red;
+	padding: 0.2em 0.4em;
+	color: white;
+	border-radius: 0.4em;
+}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.scroll-box {
+    overflow: hidden;
+}

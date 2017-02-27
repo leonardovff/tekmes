@@ -1,10 +1,10 @@
-import { TekmesPage } from './app.po';
+import { TEKMESPage } from './app.po';
 
-describe('tekmes App', function() {
-  let page: TekmesPage;
+describe('tekmes App', () => {
+  let page: TEKMESPage;
 
   beforeEach(() => {
-    page = new TekmesPage();
+    page = new TEKMESPage();
   });
 
   it('should display message saying app works', () => {

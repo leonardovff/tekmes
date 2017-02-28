@@ -3,7 +3,7 @@
   <h3>Notícias</h3>
   <div class="content">
     <ul class="list-news">
-      <news-item *ngFor="let item of [1,2,3]"></news-item>
+      <news-item *ngFor="let item of [1,2,3,4,5]" [bigger]="item==1"></news-item>
     </ul>
     <button type="button" class="ln-more"><i class="material-icons md-light md-18">refresh</i><span>EXIBIR TODOS</span></button>
   </div>

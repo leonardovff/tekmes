@@ -20,8 +20,13 @@ export class NewsItemComponent implements OnInit {
 
         let lnItemWidth = $(lnItem[0]).outerWidth();
         lnItem.each(function(i){
-          var perc = $(this).hasClass('ln-bigger')?1.2:0.6;
-          $(this).css('height',lnItemWidth*perc+"px");
+          let perc = 0.6,
+          addMargin = 0;
+          if($(this).hasClass('ln-bigger')){
+            perc = 1.2;
+            addMargin = parseInt($(this).parent().css("marginBottom"));
+          }
+          $(this).css('height',(lnItemWidth*perc+(addMargin))+"px");
         });
       },200);
     });

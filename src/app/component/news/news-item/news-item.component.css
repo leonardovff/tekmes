@@ -40,23 +40,6 @@
 	font-size: 1.3em;
 	text-shadow: 0.06em 0.06em 0em #990000;
 }
-.ln-more{
-	background-color: #990000;
-	color: white;
-	width:100%;
-	border:none;
-	padding: 0.9em 0;
-	border-bottom-left-radius: inherit;
-	border-bottom-right-radius: inherit;
-	font-size: 0.8em;
-	display: inline-block;
-	vertical-align: top;
-}
-.ln-more span{
-	margin: 0.2em 0 0 0.5em;
-	display: inline-block;
-	vertical-align: top;
-}
 @media (min-width: 34em) {
 	.ln-item{
 		line-height: 1;
@@ -67,5 +50,5 @@
 	.ln-item:nth-child(3){
 		border-top-right-radius: inherit;
 	}
-
 }
+

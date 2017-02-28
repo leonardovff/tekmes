@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -25,7 +26,14 @@ import { TkButtonComponent } from './component/tk-button/tk-button.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyDTdga1yF8R130Asi8Tm224xX5DynYUu54",
+      authDomain: "tekmes-6f3e2.firebaseapp.com",
+      databaseURL: "https://tekmes-6f3e2.firebaseio.com",
+      storageBucket: "tekmes-6f3e2.appspot.com",
+      messagingSenderId: "95932860564"
+    })
   ],
   providers: [WindowService],
   bootstrap: [AppComponent]

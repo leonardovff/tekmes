@@ -1,9 +1,9 @@
 <ul>
-  <li *ngFor="let item of [0,1,2,3,4]">
+  <li *ngFor="let service of services | async" [style.backgroundImage]="'url('+service.intro_img +')'">
     <div class="content">
-      <h5>DIGITALIZAÇÃO 3D</h5>
+      <h5>{{service.titulo}}</h5>
       <div class="content-hover">
-        <p>Capturar formas tridimensionais como o resultado uma nuvem de pontos.</p>
+        <p>{{service.sinopse}}</p>
         <tk-button></tk-button>
       </div>
     </div>

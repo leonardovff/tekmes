@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, AfterViewInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnChanges, Input, AfterViewInit, EventEmitter, Output } from '@angular/core';
 declare var $:any;
 @Component({
   selector: 'pagination',
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.css']
 })
-export class PaginationComponent implements OnInit {
+export class PaginationComponent implements OnChanges {
   @Input() temporizador:any;
   @Input() total:number;
 
@@ -22,10 +22,10 @@ export class PaginationComponent implements OnInit {
   constructor(){
 
   }
-  ngOnInit() {
+  ngOnChanges() {
     this.listNumbers = Array(this.total).fill(1).map((x,i)=>i);
 
-    //flag para verificação de adição de intervalo
+    //flag para verificação de adição de inter valo
     if(this.temporizador){
       this.setInterval();
     }

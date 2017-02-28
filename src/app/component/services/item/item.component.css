@@ -25,21 +25,9 @@ li{
     display: flex;
     /*display: inline-block;*/
 	width: 85%;
-	background: url("/assets/img/produtos_servicos/f1.jpg") no-repeat center center;
+	background: no-repeat center center;
 	margin-bottom: 0.8em;
 	background-size: cover;
-}
-li:nth-child(2){
-	background-image: url("/assets/img/produtos_servicos/f2.jpg");
-}
-li:nth-child(3){
-	background-image: url("/assets/img/produtos_servicos/f3.jpg");
-}
-li:nth-child(4){
-	background-image: url("/assets/img/produtos_servicos/f4.jpg");
-}
-li:nth-child(5){
-	background-image: url("/assets/img/produtos_servicos/f5.jpg");
 }
 li h5{
 	text-transform: uppercase;

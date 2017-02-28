@@ -6,14 +6,14 @@
       <h2>Soluções em<br> Produtos e Processos</h2>
       <div class="scroll-box">
         <ul #sliderText>
-          <li *ngFor="let text of texts">
-            <h3>“{{ text }}”</h3>
+          <li *ngFor="let text of texts | async">
+            <h3>“{{ text.description }}”</h3>
           </li>
         </ul>
       </div>
     </div>
     <pagination #pagination
-                [temporizador]="true" [total]="3"
+                [temporizador]="true" [total]="(texts | async)?.length"
                 (onChange)="changed($event)"
                 ></pagination>
     <div class="nks_cc_trigger_tabs ncf_tab ncf_label_visible" style="display: none;">

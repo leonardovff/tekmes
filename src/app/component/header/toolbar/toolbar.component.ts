@@ -14,13 +14,16 @@ export class ToolbarComponent implements OnInit {
     {url: "inicio", title:"Início", actived: true},
     {url: "servicos", title:"Serviços e Produtos", actived: false},
     {url: "portfolio", title:"Portfólio", actived: false},
-    {url: "noticias", title:"Notícias", actived: false},
-    {url: "sobre", title:"Sobre", actived: false}
+    // {url: "noticias", title:"Notícias", actived: false},
+    // {url: "sobre", title:"Sobre", actived: false}
   ]
   constructor(private windowService:WindowService) {
     windowService.width$.subscribe((value:any) => {
         //Do whatever you want with the value.
         //You can also subscribe to other observables of the service
+        setTimeout(() => {
+          this.captureDeltaTop();
+        },200)
         this.paddingToolbar();
     });
   }
@@ -32,6 +35,11 @@ export class ToolbarComponent implements OnInit {
     $(window).scroll($.throttle(100, () =>{
 			this.scrolled();
 		}));
+    $(window).on('hashchange', function(e) {
+      e.preventDefault();
+      return false;
+      //.. work ..
+    });
   }
 
   paddingToolbar(){
@@ -39,19 +47,17 @@ export class ToolbarComponent implements OnInit {
   }
 
   toggleMenu(){
-    console.log("Entrou");
     this.openedMenuMobile = this.openedMenuMobile?false:true;
   }
   captureDeltaTop(){
-		var arr = [];
-		$('.menu-nav a').each(function () {
-			var hash = this.getAttribute('href').substring(1);
-			arr.push({
-				index: hash,
-				distancia: $('section>a[name="'+hash+'"]').offset().top
-			});
+		this.deltaTop = this.sections.map(section => {
+			return {
+				index: section.url,
+				distancia: $('section>a[name="'+section.url+'"]').offset().top,
+        ref: section
+			};
 	  });
-    this.deltaTop = arr;
+    console.log(this.deltaTop);
 	}
   scrolled(){
 		if($(".menu-nav.inMoving").length !== 0) return false;
@@ -62,23 +68,28 @@ export class ToolbarComponent implements OnInit {
 			}
 		});
 		if(atual == null) return false;
-		this.selectMenu($('.menu-nav li>a[href="#'+atual.index+'"]').parent('li'));
+		this.selectMenu(atual.ref);
 	}
-	click(e){
-    console.log(e);
-		e.preventDefault();
-		var hash = e.target.getAttribute('href').substring(1);
-		this.mover(hash);
-		this.selectMenu(this);
+	click(index,e){
+    e.preventDefault();
+		this.mover(this.sections[index].url);
+		this.selectMenu(this.sections[index]);
 	}
-	selectMenu(el){
-		if($(this).hasClass("active")) return false;
+	selectMenu(section){
+    let previusActived = this.sections.filter(section => section.actived);
+    if(previusActived.length!=0){
+      previusActived[0].actived = false;
+    }
+    section.actived = true;
+    if(history.pushState) {
+        history.pushState(null, null,  "#"+section.url);
+    } else {
+        location.hash =  section.url;
+    }
 		if($(".menu-nav").hasClass("mobile-active")){
 			$(".menu-nav").removeClass("mobile-active")
 		}
-		$(".menu-nav li.active").removeClass('active');
-		$(el).addClass('active');
-	}
+  }
 	mover(hash){
 		let el = $("a[name='"+hash+"']").parent('section'),
 		body = $("html, body"),

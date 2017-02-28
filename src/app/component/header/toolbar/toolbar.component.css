@@ -119,7 +119,7 @@ nav .btn-menu{
 		display: flex;
 	}
 	.menu-nav ul li.active{
-		border-bottom: 0.3em solid #840a0a;
+		border-bottom: 0.3em solid #bf8f00;
 		background: #303030;
 	}
 	nav .btn-menu{

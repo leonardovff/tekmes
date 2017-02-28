@@ -15,6 +15,8 @@ import { TkButtonComponent } from './component/tk-button/tk-button.component';
 import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { CardListComponent } from './component/portfolio/card-list/card-list.component';
 import { CardComponent } from './component/card/card.component';
+import { NewsComponent } from './component/news/news.component';
+import { NewsItemComponent } from './component/news/news-item/news-item.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CardComponent } from './component/card/card.component';
     TkButtonComponent,
     PortfolioComponent,
     CardListComponent,
-    CardComponent
+    CardComponent,
+    NewsComponent,
+    NewsItemComponent
   ],
   imports: [
     BrowserModule,

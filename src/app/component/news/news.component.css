@@ -1,0 +1,21 @@
+.list-news{
+ 	overflow: hidden;
+	color: white;
+	width: 100%;
+	font-family: "Signika Negative Bold";
+ 	font-size: 1em;
+  margin: 0 auto;
+ 	border-radius: inherit;
+}
+@media (min-width: 34em) {
+	news-item{
+		width:33.3333%;
+		float: left;
+  }
+}
+@media (min-width: 62em) {
+	.list-news{
+		font-size: 1.1em;
+    width:80%;
+  }
+}

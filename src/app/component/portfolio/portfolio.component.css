@@ -1,0 +1,11 @@
+#portfolio h3{
+	color: white;
+}
+#portfolio{
+	background-color: rgb(180, 116, 116);
+	color: white;
+	text-align: center;
+}
+#portfolio card-list{
+	margin-top: 1.8em;
+}

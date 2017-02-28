@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef,  } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import { WindowService } from '../../service/window.service';
@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   windowWidth = null;
 	el = null;
   texts;
-  constructor(private windowService: WindowService,af: AngularFire) {
+  constructor(private windowService: WindowService, af: AngularFire) {
     this.texts = af.database.list('/banner');
     windowService.width$.subscribe((value:any) => {
       //Do whatever you want with the value.

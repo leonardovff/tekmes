@@ -1,0 +1,11 @@
+<div id="scrolling">
+  <ul #jobsEl class="list-cards">
+    <li *ngFor="let item of [0,1,2]">
+      <card [selected]="pg.selectedIndex==item"></card>
+    </li>
+  </ul>
+</div>
+<pagination #pagination
+            [temporizador]="false" [total]="3"
+            (onChange)="changed($event)"
+            ></pagination>

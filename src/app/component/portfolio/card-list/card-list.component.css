@@ -1,0 +1,54 @@
+.list-cards{
+    text-align: center;
+    font-family: "Signika Negative";
+}
+/* Carousel Frame */
+#scrolling {
+    /*margin-top: 5em;*/
+    width: auto;
+    overflow: hidden;
+}
+
+#scrolling>ul{
+  width: 2000%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.list-cards>li{
+  width: 12%;
+  overflow: hidden;
+  -webkit-transform: scale(0.88);
+  -ms-transform: scale(0.88);
+  -moz-transform: scale(0.88);
+  transform: scale(0.88);
+  float: left;
+}
+.list-cards>li.itemslide-active{
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (min-width: 34em) {
+    .list-cards{
+        font-size: 1.1em;
+    }
+    #scrolling {
+        margin-top: 1.5em;
+    }
+}
+@media (min-width: 34em) {
+    .list-cards>li{
+        width: 9%;
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 62em) {
+	.list-cards>li{
+		width: 6.3%;
+	}
+}

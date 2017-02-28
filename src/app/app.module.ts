@@ -12,6 +12,9 @@ import { WindowService } from './service/window.service';
 import { ServicesComponent } from './component/services/services.component';
 import { ItemComponent } from './component/services/item/item.component';
 import { TkButtonComponent } from './component/tk-button/tk-button.component';
+import { PortfolioComponent } from './component/portfolio/portfolio.component';
+import { CardListComponent } from './component/portfolio/card-list/card-list.component';
+import { CardComponent } from './component/card/card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { TkButtonComponent } from './component/tk-button/tk-button.component';
     PaginationComponent,
     ServicesComponent,
     ItemComponent,
-    TkButtonComponent
+    TkButtonComponent,
+    PortfolioComponent,
+    CardListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

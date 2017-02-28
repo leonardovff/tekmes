@@ -1,0 +1,106 @@
+.card-item{
+    width: 100%;
+    border-radius: 0.1em;
+    background-color: white;
+    border-bottom: 1px solid #DFDFDF;
+    box-shadow: 0 0.5em 0.6em 0 rgba(10, 10, 10, 0.04);
+    cursor: zoom-in;
+}
+.card-item.card-item--active img {
+    margin-top: -16%;
+}
+.card-item.card-item--active{
+    cursor: inherit;
+}
+.card-item .card-img{
+    position: relative;
+}
+.card-img .card-empresa{
+    bottom: 7%;
+    right: 5%;
+    padding: 0.2em 0.25em;
+    border-radius: 0.3em;
+    text-transform: uppercase;
+    background-color: #ff0000;
+    color: white;
+    position: absolute;
+}
+.card-item.card-item--active .card-empresa{
+    left: 5%;
+    right: auto;
+    top: 7%;
+    bottom: auto;
+}
+.card-content-bottom{
+    display: inline-block;
+}
+.card-time{
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: 2.8;
+    font-size: 0.6em;
+}
+.card-item .card-content{
+    overflow: auto;
+    color: #494949;
+}
+.card-item.card-item--active .card-content{
+    padding: 1em 0 1.1em;
+}
+.card-item tk-button{
+    font-size: 0.7em;
+}
+.card-item .card-img img{
+  width: 100%;
+}
+.card-item .card-content p,
+.card-item .card-content tk-button{
+  display: none;
+}
+.card-item tk-button{
+  float:left;
+}
+.card-content-bottom>tk-button{
+  margin-left: 0.8em;
+}
+
+.card-item.card-item--active .card-content p{
+  display: inline-block;
+}
+.card-item.card-item--active .card-content tk-button{
+  display: table;
+}
+.card-description{
+  display: block;
+  margin: 0.6em 0.9em;
+  font-size: 0.8em;
+}
+.card-item .title{
+  margin: 1.6em 0;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.card-item.card-item--active .title{
+  margin: 0;
+}
+
+
+@media (min-width: 50em) {
+  .card-item.card-item--active .card-content{
+      padding: 1em .4em 1.1em 0;
+  }
+}
+@media (min-width: 62em) {
+  .card-item tk-button{
+      font-size: 0.7em;
+  }
+  .card-time{
+      line-height: 3.4;
+  }
+}
+
+@media (min-width: 70em) {
+  .card-item tk-button{
+      font-size: 0.8em;
+  }
+}

@@ -94,10 +94,9 @@ nav .btn-menu{
 		width: 20%;
 	}
 	.menu-nav{
-		position: relative;
-    	justify-content: flex-end;
+    justify-content: flex-end;
 		align-items: right;
-	    width: 80%;
+	  width: 80%;
 	}
 	.menu-nav.mobile-active ul{
 		width: auto;

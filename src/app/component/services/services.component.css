@@ -1,1 +1,16 @@
+service-list{
+  width:80%;
+  display: block;
+  margin: 0 auto;
+}
 
+@media (min-width: 34em) {
+  service-list{
+    width: 90%;
+  }
+}
+@media (max-width: 62em) {
+  service-list{
+    width: 80%;
+  }
+}

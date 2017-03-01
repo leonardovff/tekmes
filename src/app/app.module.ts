@@ -18,6 +18,8 @@ import { CardListComponent } from './component/portfolio/card-list/card-list.com
 import { CardComponent } from './component/card/card.component';
 import { NewsComponent } from './component/news/news.component';
 import { NewsItemComponent } from './component/news/news-item/news-item.component';
+import { AboutComponent } from './component/about/about.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NewsItemComponent } from './component/news/news-item/news-item.componen
     CardListComponent,
     CardComponent,
     NewsComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

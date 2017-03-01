@@ -1,8 +1,6 @@
 @import './reset.scss';
 @import './fonts.scss';
-@import '~@angular/material/core/theming/all-theme';
-@include mat-core();
-
+@import './md.scss';
 body{
 	font-size: 14px;
 }

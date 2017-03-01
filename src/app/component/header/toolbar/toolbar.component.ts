@@ -15,7 +15,7 @@ export class ToolbarComponent implements OnInit {
     {url: "servicos", title:"Serviços e Produtos", actived: false},
     {url: "portfolio", title:"Portfólio", actived: false},
     {url: "noticias", title:"Notícias", actived: false},
-    // {url: "sobre", title:"Sobre", actived: false}
+    {url: "sobre", title:"Sobre", actived: false}
   ]
   constructor(private windowService:WindowService) {
     windowService.width$.subscribe((value:any) => {

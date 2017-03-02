@@ -24,6 +24,9 @@ import { AboutComponent } from './component/home/about/about.component';
 import { FooterComponent } from './component/home/footer/footer.component';
 import { ServiceDetailsComponent } from './component/service-details/service-details.component';
 import { HomeComponent } from './component/home/home.component';
+import { HeaderInternalComponent } from './component/internal/header-internal/header-internal.component';
+import { ContentInternalComponent } from './component/internal/content-internal/content-internal.component';
+import { FooterInternalComponent } from './component/internal/footer-internal/footer-internal.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { HomeComponent } from './component/home/home.component';
     AboutComponent,
     FooterComponent,
     ServiceDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderInternalComponent,
+    ContentInternalComponent,
+    FooterInternalComponent
   ],
   imports: [
     BrowserModule,

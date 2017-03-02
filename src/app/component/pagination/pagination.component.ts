@@ -1,5 +1,4 @@
 import { Component, OnChanges, Input, AfterViewInit, EventEmitter, Output } from '@angular/core';
-declare var $:any;
 @Component({
   selector: 'pagination',
   templateUrl: './pagination.component.html',

@@ -1,0 +1,19 @@
+.contentInternal{
+	font-family: "Candara";
+	position: relative;
+	z-index: 101;
+	background: white;
+	overflow: auto;
+}
+.view-servico .contentInternal>div{
+ 	padding: 30px;
+}
+
+@media (min-width: 34em) {
+	.view-servico .contentInternal>div{
+		width:50%;
+		float: left;
+	}
+}
+html, body, .contentInternal { height: 100%; }
+body > .contentInternal { height: auto; min-height: 100%; }

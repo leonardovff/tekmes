@@ -10,7 +10,5 @@ declare var $:any;
 export class AppComponent {
   title = 'app works!';
   ngAfterViewInit(){
-    var x = $('p');
-    console.log(x);
   }
 }

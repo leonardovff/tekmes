@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 
-import { WindowService } from '../../../service/window.service';
+import { WindowService } from '../../../../service/window.service';
 declare var $:any;
 
 @Component({

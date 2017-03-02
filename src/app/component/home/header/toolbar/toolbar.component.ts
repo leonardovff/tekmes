@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WindowService } from '../../../service/window.service';
+import { WindowService } from '../../../../service/window.service';
 declare var $:any;
 
 @Component({

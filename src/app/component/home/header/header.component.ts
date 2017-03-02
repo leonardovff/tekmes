@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
-import { WindowService } from '../../service/window.service';
+import { WindowService } from '../../../service/window.service';
 declare var $:any;
 
 @Component({

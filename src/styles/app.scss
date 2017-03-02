@@ -102,3 +102,7 @@ section.sct h4{
 		font-size: 2em;
 	}
 }
+
+
+html, body, .contentInternal { height: 100%; }
+body .contentInternal { height: auto; min-height: 100%; }

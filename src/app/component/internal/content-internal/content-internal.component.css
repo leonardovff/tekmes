@@ -15,5 +15,3 @@
 		float: left;
 	}
 }
-html, body, .contentInternal { height: 100%; }
-body > .contentInternal { height: auto; min-height: 100%; }

@@ -1,4 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+
+import { WindowService } from '../../../service/window.service';
 declare var $:any;
 @Component({
   selector: 'details-header',
@@ -11,20 +13,23 @@ export class HeaderInternalComponent implements OnInit {
   @ViewChild('nav') nav:ElementRef;
 
   el = null;
+  fatherEl = null;
   height = 0;
-  constructor() { }
+  constructor(private windowService: WindowService) {
+    windowService.width$.subscribe((value:any) => {
+      this.onResize();
+    });
+  }
 
   ngOnInit() {
     console.log("Entrou");
   }
   ngAfterViewInit(){
-    this.el = $(this.nav.nativeElement);
-    this.captureHeight();
-		let el = $(this.header.nativeElement).parent().parent();
-    el.css({
-      "paddingTop": ($(".headerInside-banner").outerHeight()-1)+"px",
-		  "paddingBottom": ($(".footerContact").outerHeight()-1)+"px"
-    });
+      this.el = $(this.nav.nativeElement);
+      this.fatherEl = $(this.header.nativeElement).parent().parent();
+      $(window).scroll($.throttle(100, () =>{
+        this.changeStatus();
+      }));
   }
   captureHeight(){
       this.height = this.el.outerHeight();
@@ -36,5 +41,18 @@ export class HeaderInternalComponent implements OnInit {
       if(this.el.hasClass('headerInside-navbar--show')){
           this.el.removeClass('headerInside-navbar--show');
       }
+  }
+  onResize(){
+    setTimeout(()=>{
+      console.log(this.fatherEl);
+      this.captureHeight();
+      this.fatherEl.css({
+        "paddingTop": ($(".headerInside-banner").outerHeight()-1)+"px",
+        "paddingBottom": ($(".footerContact").outerHeight()-1)+"px",
+        "display": "block",
+        "height": "100%",
+        "min-height": "100%"
+      });
+    },200)
   }
 }

@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('sliderText') sliderText:ElementRef;
   @ViewChild('pagination') pg;
+
   windowWidth = null;
 	el = null;
   texts;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WindowService } from '../../../../service/window.service';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var $:any;
 
 @Component({
@@ -8,6 +9,7 @@ declare var $:any;
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
+  isHomepage:boolean = false;
   deltaTop:any[];
   openedMenuMobile: boolean = false;
   sections = [
@@ -17,29 +19,42 @@ export class ToolbarComponent implements OnInit {
     {url: "noticias", title:"Notícias", actived: false},
     {url: "sobre", title:"Sobre", actived: false}
   ]
-  constructor(private windowService:WindowService) {
+  constructor(
+    private windowService:WindowService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     windowService.width$.subscribe((value:any) => {
         //Do whatever you want with the value.
         //You can also subscribe to other observables of the service
         setTimeout(() => {
+          if(this.isHomepage)
           this.captureDeltaTop();
+          this.paddingToolbar();
         },200)
-        this.paddingToolbar();
     });
-  }
-
-  ngOnInit() {
-  }
-  ngAfterViewInit(){
-    this.paddingToolbar();
     $(window).scroll($.throttle(100, () =>{
-			this.scrolled();
+      if(this.isHomepage)
+			  this.scrolled();
 		}));
     $(window).on('hashchange', function(e) {
       e.preventDefault();
       return false;
       //.. work ..
     });
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe(params => {
+      let section = this.sections.filter(section => `/#${section.url}`==params.url);
+      if(params.url=="/" || section.length>0){
+       return this.isHomepage = true;
+      }
+      this.isHomepage = false;
+    });
+  }
+  ngAfterViewInit(){
+    this.paddingToolbar();
   }
 
   paddingToolbar(){
@@ -57,8 +72,8 @@ export class ToolbarComponent implements OnInit {
         ref: section
 			};
 	  });
-    console.log(this.deltaTop);
 	}
+
   scrolled(){
 		if($(".menu-nav.inMoving").length !== 0) return false;
 		var atual = null;

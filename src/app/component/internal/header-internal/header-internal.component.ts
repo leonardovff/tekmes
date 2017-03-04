@@ -11,7 +11,6 @@ export class HeaderInternalComponent implements OnInit {
 
   @ViewChild('header') header:ElementRef;
   @ViewChild('nav') nav:ElementRef;
-
   el = null;
   fatherEl = null;
   height = 0;
@@ -22,7 +21,6 @@ export class HeaderInternalComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("Entrou");
   }
   ngAfterViewInit(){
       this.el = $(this.nav.nativeElement);
@@ -44,7 +42,6 @@ export class HeaderInternalComponent implements OnInit {
   }
   onResize(){
     setTimeout(()=>{
-      console.log(this.fatherEl);
       this.captureHeight();
       this.fatherEl.css({
         "paddingTop": ($(".headerInside-banner").outerHeight()-1)+"px",

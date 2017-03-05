@@ -1,63 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <!-- Font Awesome for awesome icons. You can redefine icons used in a plugin configuration -->
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- CSS -->
-<link rel="stylesheet" href="bower_components/medium-editor/dist/css/medium-editor.min.css">
-<link rel="stylesheet" href="bower_components/medium-editor/dist/css/themes/default.css">
-<link rel="stylesheet" href="bower_components/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.min.css">
+  <title>ng2-admin - Angular 2 Admin Template</title>
 
-</head>
+  <meta name="description" content="Free Angular 2 and Bootstrap 4 Admin Template">
+
+  
+  <!-- Configured Head Tags  -->
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="assets/icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#4691d1">
+  
+
+  <!-- base url -->
+  <base href="/admin/>">
+
+
+<link href="initial.css" rel="stylesheet"><script type="text/javascript" src="polyfills.fcfb9a44531171c7c71a.bundle.js" defer></script><script type="text/javascript" src="vendor.6bd3454ab7b65eb1cb72.bundle.js" defer></script><script type="text/javascript" src="main.985380f485b01935654b.bundle.js" defer></script></head>
+
 <body>
-    <p class="editable">asdasdoas dpokaspdokass dkopaskpdoasd</p>
-<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<app>
+</app>
 
-<!-- JS -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/medium-editor/dist/js/medium-editor.js"></script>
-<script src="bower_components/handlebars/handlebars.runtime.min.js"></script>
-<script src="bower_components/jquery-sortable/source/js/jquery-sortable-min.js"></script>
-<script src="bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
-<script src="bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
-<script src="bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
-<script src="bower_components/medium-editor-insert-plugin/dist/js/medium-editor-insert-plugin.min.js"></script>
-<script>
-    var editor = new MediumEditor('.editable');
-    $(function () {
-        $('.editable').mediumInsert({
-            editor: editor
-        });
-    });
-</script>
-<script>
-    function show(e, v){
-        console.log(e,v);
-    }
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyDTdga1yF8R130Asi8Tm224xX5DynYUu54",
-        authDomain: "tekmes-6f3e2.firebaseapp.com",
-        databaseURL: "https://tekmes-6f3e2.firebaseio.com",
-        storageBucket: "tekmes-6f3e2.appspot.com",
-        messagingSenderId: "95932860564"
-    };
-    firebase.initializeApp(config);
-    var starCountRef = firebase.database().ref('servicos/0');
-starCountRef.on('value', function(snapshot) {
-  console.log(snapshot.val());
-});
-firebase.database().ref('servicos/').set([{
-    autor: 'name',
-    conteudo: "asdasokdpkdok",
-    date : '2012-03-1'
-  }, {autor: 'Fábio',
-    conteudo: "sadasdasd",
-    date : '2013-03-1'}]);
-</script>
+<div id="preloader">
+  <div></div>
+</div>
 
+
+
+<link
+  href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic'
+  rel='stylesheet' type='text/css'>
 </body>
 </html>

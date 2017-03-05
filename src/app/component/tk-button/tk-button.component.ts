@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'tk-button',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tk-button.component.css']
 })
 export class TkButtonComponent implements OnInit {
-
+  @Input() id:number = 1;
   constructor() { }
 
   ngOnInit() {

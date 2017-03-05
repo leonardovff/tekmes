@@ -8,7 +8,7 @@ import { ServiceDetailsComponent} from './component/service-details/service-deta
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'servicos', component: ServiceDetailsComponent},
+  { path: 'servicos/:id', component: ServiceDetailsComponent},
   { path: 'not-found', component: HomeComponent },
   { path: '**', redirectTo: 'not-found' }
 

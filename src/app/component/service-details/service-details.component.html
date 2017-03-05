@@ -1,3 +1,4 @@
-<details-header></details-header>
-<content-internal></content-internal>
+<details-header [title]="(service | async)?.titulo"></details-header>
+<content-internal [firstColumn]="(service | async)?.conteudo1"
+                  [secondColumn]="(service | async)?.conteudo2"></content-internal>
 <footer-internal></footer-internal>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'content-internal',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-internal.component.css']
 })
 export class ContentInternalComponent implements OnInit {
-
+  @Input() firstColumn:string;
+  @Input() secondColumn:string;
   constructor() { }
 
   ngOnInit() {

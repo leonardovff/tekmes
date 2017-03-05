@@ -5,12 +5,12 @@
 	background: white;
 	overflow: auto;
 }
-.view-servico .contentInternal>div{
+.contentInternal>div{
  	padding: 30px;
 }
 
 @media (min-width: 34em) {
-	.view-servico .contentInternal>div{
+	.contentInternal>div{
 		width:50%;
 		float: left;
 	}

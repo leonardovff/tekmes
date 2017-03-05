@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 import { WindowService } from '../../../service/window.service';
 declare var $:any;
@@ -8,7 +8,7 @@ declare var $:any;
   styleUrls: ['./header-internal.component.css']
 })
 export class HeaderInternalComponent implements OnInit {
-
+  @Input() title:string;
   @ViewChild('header') header:ElementRef;
   @ViewChild('nav') nav:ElementRef;
   el = null;

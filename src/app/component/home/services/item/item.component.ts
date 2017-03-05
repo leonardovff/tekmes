@@ -24,6 +24,7 @@ export class ItemComponent implements OnInit {
     });
     this.services = af.database.list('/servicos');
     this.services.subscribe((e) => {
+      console.log(this.services);
       setTimeout(() => {
         this.onResize();
       },200);

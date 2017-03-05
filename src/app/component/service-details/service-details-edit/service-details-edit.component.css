@@ -1,5 +1,8 @@
-button{
+button, md-progress-circle{
   position: fixed;
   bottom: 14px;
   right: 14px;
+}
+md-progress-circle{
+  width: 50px;
 }

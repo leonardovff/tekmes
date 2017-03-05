@@ -11,6 +11,7 @@ export class ServiceDetailsEditComponent implements OnInit {
   service: FirebaseObjectObservable<any>;
   @ViewChild('header') header;
   @ViewChild('content') content;
+  inSaving: boolean =  false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -32,7 +33,16 @@ export class ServiceDetailsEditComponent implements OnInit {
     obj['conteudo1'] = this.content.firstColumn.replace(regex, "");
     obj['conteudo2'] = this.content.secondColumn.replace(regex, "");
     console.log(obj);
-    this.service.update(obj);
+    let promise = this.service.update(obj);
+    this.inSaving = true;
+    promise
+      .then(_ => this.inSaving = false)
+      .catch(err => {
+        window.alert("Ocorreu um erro");
+        this.inSaving = false;
+        console.log(err, 'You dont have access!')
+
+      });
   }
 
 }

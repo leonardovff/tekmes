@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.directive';
 
 import { WindowService } from '../../../service/window.service';
 declare var $:any;
@@ -8,7 +9,8 @@ declare var $:any;
   styleUrls: ['./header-internal.component.css']
 })
 export class HeaderInternalComponent implements OnInit {
-  @Input() title:string;
+  @Input() title:string = "";
+  @Input() editable:boolean = false;
   @ViewChild('header') header:ElementRef;
   @ViewChild('nav') nav:ElementRef;
   el = null;

@@ -1,0 +1,6 @@
+<details-header #header [editable]="true" [title]="(service | async)?.titulo"></details-header>
+<content-internal [editable]="true" #content [firstColumn]="(service | async)?.conteudo1"
+                  [secondColumn]="(service | async)?.conteudo2"></content-internal>
+<footer-internal>
+  <button (click)="save()" md-fab button-save><md-icon>save</md-icon></button>
+</footer-internal>

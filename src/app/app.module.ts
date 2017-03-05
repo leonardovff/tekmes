@@ -23,10 +23,13 @@ import { NewsItemComponent } from './component/home/news/news-item/news-item.com
 import { AboutComponent } from './component/home/about/about.component';
 import { FooterComponent } from './component/home/footer/footer.component';
 import { ServiceDetailsComponent } from './component/service-details/service-details.component';
+import { ServiceDetailsEditComponent } from './component/service-details/service-details-edit/service-details-edit.component';
+
 import { HomeComponent } from './component/home/home.component';
 import { HeaderInternalComponent } from './component/internal/header-internal/header-internal.component';
 import { ContentInternalComponent } from './component/internal/content-internal/content-internal.component';
 import { FooterInternalComponent } from './component/internal/footer-internal/footer-internal.component';
+import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.directive';
 
 @NgModule({
   declarations: [
@@ -45,10 +48,12 @@ import { FooterInternalComponent } from './component/internal/footer-internal/fo
     AboutComponent,
     FooterComponent,
     ServiceDetailsComponent,
+    ServiceDetailsEditComponent,
     HomeComponent,
     HeaderInternalComponent,
     ContentInternalComponent,
-    FooterInternalComponent
+    FooterInternalComponent,
+    MediumEditorDirective
   ],
   imports: [
     BrowserModule,

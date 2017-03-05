@@ -5,6 +5,11 @@
       </a>
     </nav>
     <div class="headerInside-banner">
-      <h2 class="headerInside-title editableSimple">{{title}}</h2>
+      <h2 class="headerInside-title editableSimple">
+          <medium-editor *ngIf="editable" [(editorModel)]="title"
+      [editorOptions]="{'toolbar': false}"
+      [editorPlaceholder]="'titulo'"></medium-editor>
+          <span *ngIf="!editable">{{title}}</span>
+      </h2>
     </div>
 </header>

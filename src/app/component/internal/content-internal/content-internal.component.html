@@ -1,4 +1,14 @@
 <main class="contentInternal">
-  <div class="editable">{{firstColumn}}</div>
-  <div class="editable">{{secondColumn}}</div>
+  <div *ngIf="editable">
+    <medium-editor [(editorModel)]="firstColumn"
+        [editorOptions]="options"
+        [editorPlaceholder]="'digite o texto'"></medium-editor>
+  </div>
+  <div *ngIf="!editable" #firstColumnText></div>
+  <div *ngIf="editable">
+    <medium-editor *ngIf="editable" [(editorModel)]="secondColumn"
+        [editorOptions]="options"
+        [editorPlaceholder]="'digite o texto'"></medium-editor>
+  </div>
+  <div *ngIf="!editable" #secondColumnText></div>
 </main>

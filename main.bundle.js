@@ -74,6 +74,7 @@ var ServiceDetailsEditComponent = (function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
             var id = parseInt(params['id']);
+            _this.id = id;
             _this.service = _this.af.database.object('/servicos/' + id);
         });
     };
@@ -87,7 +88,9 @@ var ServiceDetailsEditComponent = (function () {
         var promise = this.service.update(obj);
         this.inSaving = true;
         promise
-            .then(function (_) { return _this.inSaving = false; })
+            .then(function (_) {
+            _this.router.navigateByUrl('/servicos/' + _this.id + "");
+        })
             .catch(function (err) {
             window.alert("Ocorreu um erro");
             _this.inSaving = false;
@@ -143,10 +146,15 @@ var ServiceDetailsComponent = (function () {
         this.route = route;
         this.af = af;
     }
+    ServiceDetailsComponent.prototype.edit = function () {
+        console.log('/servicos/' + this.id + "/edit");
+        this.router.navigateByUrl('/servicos/' + this.id + "/edit");
+    };
     ServiceDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
             var id = parseInt(params['id']);
+            _this.id = id;
             _this.service = _this.af.database.object('/servicos/' + id);
         });
     };
@@ -1787,7 +1795,7 @@ exports = module.exports = __webpack_require__(12)();
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "button, md-progress-circle{\n  position: fixed;\n  bottom: 14px;\n  right: 14px;\n}\nmd-progress-circle{\n  width: 50px;\n}\n", ""]);
 
 // exports
 
@@ -1944,7 +1952,7 @@ module.exports = "<details-header #header [editable]=\"true\" [title]=\"(service
 /***/ 787:
 /***/ (function(module, exports) {
 
-module.exports = "<details-header [title]=\"(service | async)?.titulo\"></details-header>\n<content-internal [firstColumn]=\"(service | async)?.conteudo1\"\n                  [secondColumn]=\"(service | async)?.conteudo2\"></content-internal>\n<footer-internal></footer-internal>\n"
+module.exports = "<details-header [title]=\"(service | async)?.titulo\"></details-header>\n<content-internal [firstColumn]=\"(service | async)?.conteudo1\"\n                  [secondColumn]=\"(service | async)?.conteudo2\"></content-internal>\n<footer-internal>\n   <button (click)=\"edit()\" md-fab button-save>\n    <md-icon>edit</md-icon>\n  </button>\n</footer-internal>\n"
 
 /***/ }),
 

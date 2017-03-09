@@ -24,7 +24,7 @@ export class ServiceDetailsEditComponent implements OnInit {
     }
   ngOnInit() {
     this.route.params.subscribe(params => {
-      let id = parseInt(params['id']);
+      let id = parseInt(params['id']) >= 0 ? parseInt(params['id']) : params['id'];
       this.id = id;
       this.service = this.af.database.object('/servicos/'+id);
     });

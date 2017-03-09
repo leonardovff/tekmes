@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app.routing.module';
 
@@ -24,12 +24,24 @@ import { AboutComponent } from './component/home/about/about.component';
 import { FooterComponent } from './component/home/footer/footer.component';
 import { ServiceDetailsComponent } from './component/service-details/service-details.component';
 import { ServiceDetailsEditComponent } from './component/service-details/service-details-edit/service-details-edit.component';
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
+
 
 import { HomeComponent } from './component/home/home.component';
 import { HeaderInternalComponent } from './component/internal/header-internal/header-internal.component';
 import { ContentInternalComponent } from './component/internal/content-internal/content-internal.component';
 import { FooterInternalComponent } from './component/internal/footer-internal/footer-internal.component';
 import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.directive';
+import { LoginComponent } from './component/login/login.component';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDTdga1yF8R130Asi8Tm224xX5DynYUu54",
+  authDomain: "tekmes-6f3e2.firebaseapp.com",
+  databaseURL: "https://tekmes-6f3e2.firebaseio.com",
+  storageBucket: "tekmes-6f3e2.appspot.com",
+  messagingSenderId: "95932860564"
+}
 
 @NgModule({
   declarations: [
@@ -53,7 +65,8 @@ import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.dire
     HeaderInternalComponent,
     ContentInternalComponent,
     FooterInternalComponent,
-    MediumEditorDirective
+    MediumEditorDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -61,15 +74,16 @@ import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.dire
     HttpModule,
     MaterialModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyDTdga1yF8R130Asi8Tm224xX5DynYUu54",
-      authDomain: "tekmes-6f3e2.firebaseapp.com",
-      databaseURL: "https://tekmes-6f3e2.firebaseio.com",
-      storageBucket: "tekmes-6f3e2.appspot.com",
-      messagingSenderId: "95932860564"
+    AngularFireModule.initializeApp(firebaseConfig,{
+      provider: AuthProviders.Google,
+      method: AuthMethods.Popup
     })
   ],
-  providers: [WindowService],
+  providers: [
+    WindowService,
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,7 +2,7 @@
 <content-internal [editable]="true" #content [firstColumn]="(service | async)?.conteudo1"
                   [secondColumn]="(service | async)?.conteudo2"></content-internal>
 <footer-internal>
-  <button (click)="save()" *ngIf="!inSaving" md-fab button-save>
+  <button (click)="save()" *ngIf="!inSaving && authService.isAuthenticated()" md-fab button-save>
     <md-icon>save</md-icon>
   </button>
   <md-progress-circle *ngIf="inSaving"

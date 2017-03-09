@@ -10,7 +10,7 @@
  	border-top-right-radius: inherit;
 }
 .ln-item:nth-child(1n){
-	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("/assets/img/noticias/item_1.png");
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("/tekmes/assets/img/noticias/item_1.png");
 }
 .ln-item:nth-child(2n){
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, .85)),url("/assets/img/noticias/item_2.png");

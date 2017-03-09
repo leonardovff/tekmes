@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import {AngularFire, FirebaseObjectObservable} from 'angularfire2';
-
+import {AngularFire, AuthProviders, FirebaseObjectObservable} from 'angularfire2';
+import { AuthService } from "./../../../auth/auth.service";
 @Component({
   selector: 'service-details-edit',
   templateUrl: './service-details-edit.component.html',
@@ -12,15 +12,20 @@ export class ServiceDetailsEditComponent implements OnInit {
   @ViewChild('header') header;
   @ViewChild('content') content;
   inSaving: boolean =  false;
+  private user;
+  id:number;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private af: AngularFire
-  ) { }
+    private af: AngularFire,
+    private authService: AuthService
+    ) {
 
+    }
   ngOnInit() {
     this.route.params.subscribe(params => {
       let id = parseInt(params['id']);
+      this.id = id;
       this.service = this.af.database.object('/servicos/'+id);
     });
   }
@@ -36,7 +41,9 @@ export class ServiceDetailsEditComponent implements OnInit {
     let promise = this.service.update(obj);
     this.inSaving = true;
     promise
-      .then(_ => this.inSaving = false)
+      .then(_ => {
+          this.router.navigateByUrl('/servicos/'+this.id+"");
+      })
       .catch(err => {
         window.alert("Ocorreu um erro");
         this.inSaving = false;

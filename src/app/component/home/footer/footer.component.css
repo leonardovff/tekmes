@@ -43,7 +43,7 @@ footer{
 	width: 35px;
 	height: 35px;
 	text-indent: -99999px;
-	background: url("/assets/img/redes_split.jpg") no-repeat center center;
+	background: url("/tekmes/assets/img/redes_split.jpg") no-repeat center center;
 	display: inline-block;
 }
 .redes li:last-child{

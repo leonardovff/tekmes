@@ -9,6 +9,10 @@ declare var $:any;
 })
 export class AppComponent {
   title = 'app works!';
-  ngAfterViewInit(){
+  user = {};
+  // ngAfterViewInit(){
+  constructor(
+  ) {
+
   }
 }

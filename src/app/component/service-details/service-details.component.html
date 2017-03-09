@@ -1,4 +1,8 @@
 <details-header [title]="(service | async)?.titulo"></details-header>
 <content-internal [firstColumn]="(service | async)?.conteudo1"
                   [secondColumn]="(service | async)?.conteudo2"></content-internal>
-<footer-internal></footer-internal>
+<footer-internal>
+   <button *ngIf="authService.isAuthenticated()" (click)="edit()" md-fab button-save>
+    <md-icon>edit</md-icon>
+  </button>
+</footer-internal>

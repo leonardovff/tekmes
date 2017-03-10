@@ -22,7 +22,9 @@ export class ItemComponent implements OnInit {
           this.onResize();
         },200)
     });
-    this.services = af.database.list('/servicos');
+    this.services = af.database.list('/servicos').map( items =>
+      items.sort((a, b) => b.ordem - a.ordem
+    )) as FirebaseListObservable<any[]>;;
     this.services.subscribe((e) => {
       console.log(this.services);
       setTimeout(() => {

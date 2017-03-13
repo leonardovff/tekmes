@@ -1390,6 +1390,7 @@ var HeaderInternalComponent = (function () {
         var _this = this;
         this.windowService = windowService;
         this.title = "";
+        this.img = "";
         this.editable = false;
         this.el = null;
         this.fatherEl = null;
@@ -1398,7 +1399,18 @@ var HeaderInternalComponent = (function () {
             _this.onResize();
         });
     }
+    HeaderInternalComponent.prototype.changeBanner = function () {
+        var backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0, 0.75),';
+        backgroundImage += "transparent),url('" + this.img + "')";
+        console.log(backgroundImage);
+        console.log(this.banner);
+        this.banner.nativeElement.style.backgroundImage = backgroundImage;
+    };
     HeaderInternalComponent.prototype.ngOnInit = function () {
+    };
+    HeaderInternalComponent.prototype.ngOnChanges = function () {
+        console.log('entrou');
+        this.changeBanner();
     };
     HeaderInternalComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
@@ -1438,6 +1450,10 @@ var HeaderInternalComponent = (function () {
     ], HeaderInternalComponent.prototype, "title", void 0);
     __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Input */])(), 
+        __metadata('design:type', String)
+    ], HeaderInternalComponent.prototype, "img", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Input */])(), 
         __metadata('design:type', Boolean)
     ], HeaderInternalComponent.prototype, "editable", void 0);
     __decorate([
@@ -1448,16 +1464,20 @@ var HeaderInternalComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('nav'), 
         __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === 'function' && _b) || Object)
     ], HeaderInternalComponent.prototype, "nav", void 0);
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('banner'), 
+        __metadata('design:type', (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === 'function' && _c) || Object)
+    ], HeaderInternalComponent.prototype, "banner", void 0);
     HeaderInternalComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_3" /* Component */])({
             selector: 'details-header',
             template: __webpack_require__(788),
             styles: [__webpack_require__(762)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__service_window_service__["a" /* WindowService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__service_window_service__["a" /* WindowService */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__service_window_service__["a" /* WindowService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__service_window_service__["a" /* WindowService */]) === 'function' && _d) || Object])
     ], HeaderInternalComponent);
     return HeaderInternalComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=/home/leonardovff/dev/tekmes/dev/src/header-internal.component.js.map
 
@@ -1923,7 +1943,7 @@ exports = module.exports = __webpack_require__(11)();
 
 
 // module
-exports.push([module.i, ".headerInside-banner{\n    font-size: 14px;\n\tposition: fixed;\n\tclear:both;\n\ttop:0;\n\tleft:0;\n\tbackground: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent),url('/tekmes/assets/img/banner_services.jpg') no-repeat center center;\n\tbackground: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent),url('/tekmes/assets/img/banner_services.jpg') no-repeat center center;\n\tbackground-size: cover;\n\ttext-align: center;\n\twidth: 100%;\n\t/*z-index: 100;*/\n\tpadding: 7em 0;\n\tfont-family: \"Montserrat\";\n}\n.headerInside-navbar{\n\twidth: 100%;\n\tz-index: 102;\n\tposition: fixed;\n    top: 0%;\n    left: 0%;\n}\n.headerInside-navbar--show{\n\tbackground: #990000;\n\tbox-shadow: 0 0.1em 0.7em rgba(0,0,0,.7);\n}\n.headerInside-navbar-back{\n\tfont-family: \"Candara\";\n\tcolor:white;\n\tfont-weight: bold;\n\tfloat: left;\n\ttext-transform: uppercase;\n\tpadding: 1.5em;\n\tfont-size: 1.1em;\n}\n.headerInside-navbar-back .material-icons{\n\tvertical-align: middle;\n\tpadding-right: 0.5em;\n\tfont-size: 2em;\n}\n.headerInside-title{\n\tposition: relative;\n\tfont-size: 2.5em;\n\tcolor: white;\n  \ttext-transform: uppercase;\n  \tline-height: 1.098;\n  \ttext-align: center;\n  \ttext-shadow: 0.06em 0.09em 0.2px rgba(10, 10, 10, 0.2);\n}\n.headerInside-title::before,\n.headerInside-title::after\n{\tposition: absolute;\n\tcontent: \"\";\n\twidth: 25%;\n\tleft: 50%;\n\ttop: -0.4em;\n\tborder: solid #bf8f00;\n\tborder-width: 0.11em 0 0;\n\t-webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.headerInside-title::after{\n\ttop: auto;\n\tbottom: -0.4em;\n}\n@media (min-width: 34em) {\n\t.headerInside-banner{\n\t\tpadding: 6em 0;\n\t}\n\t.headerInside-title{\n\t\tfont-size: 2.4em;\n\t}\n\t.headerInside-title::before,\n\t.headerInside-title::after{\n\t\twidth: 15%;\n\t}\n}\n@media (min-width: 62em) {\n\t.headerInside-banner{\n\t\tpadding: 10em 0;\n\t}\n\t.headerInside-title{\n\t\tfont-size: 4em;\n\t}\n\t.headerInside-title::before,\n\t.headerInside-title::after{\n\t\ttop: -0.4em;\n\t\tborder-width: 0.1em 0 0;\n\t\twidth: 20%;\n\t}\n\t.headerInside-title::after{\n\t\ttop: auto;\n\t\tbottom: -0.4em;\n\t}\n}\n", ""]);
+exports.push([module.i, ".headerInside-banner{\n    font-size: 14px;\n\tposition: fixed;\n\tclear:both;\n\ttop:0;\n\tleft:0;\n\tbackground: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent),white no-repeat center center;\n\tbackground: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent),white no-repeat center center;\n\tbackground-size: cover;\n\ttext-align: center;\n\twidth: 100%;\n\t/*z-index: 100;*/\n\tpadding: 7em 0;\n\tfont-family: \"Montserrat\";\n}\n.headerInside-navbar{\n\twidth: 100%;\n\tz-index: 102;\n\tposition: fixed;\n    top: 0%;\n    left: 0%;\n}\n.headerInside-navbar--show{\n\tbackground: #990000;\n\tbox-shadow: 0 0.1em 0.7em rgba(0,0,0,.7);\n}\n.headerInside-navbar-back{\n\tfont-family: \"Candara\";\n\tcolor:white;\n\tfont-weight: bold;\n\tfloat: left;\n\ttext-transform: uppercase;\n\tpadding: 1.5em;\n\tfont-size: 1.1em;\n}\n.headerInside-navbar-back .material-icons{\n\tvertical-align: middle;\n\tpadding-right: 0.5em;\n\tfont-size: 2em;\n}\n.headerInside-title{\n\tposition: relative;\n\tfont-size: 2.5em;\n\tcolor: white;\n  \ttext-transform: uppercase;\n  \tline-height: 1.098;\n  \ttext-align: center;\n  \ttext-shadow: 0.06em 0.09em 0.2px rgba(10, 10, 10, 0.2);\n}\n.headerInside-title::before,\n.headerInside-title::after\n{\tposition: absolute;\n\tcontent: \"\";\n\twidth: 25%;\n\tleft: 50%;\n\ttop: -0.4em;\n\tborder: solid #bf8f00;\n\tborder-width: 0.11em 0 0;\n\t-webkit-transform: translateX(-50%);\n    transform: translateX(-50%);\n}\n.headerInside-title::after{\n\ttop: auto;\n\tbottom: -0.4em;\n}\n@media (min-width: 34em) {\n\t.headerInside-banner{\n\t\tpadding: 6em 0;\n\t}\n\t.headerInside-title{\n\t\tfont-size: 2.4em;\n\t}\n\t.headerInside-title::before,\n\t.headerInside-title::after{\n\t\twidth: 15%;\n\t}\n}\n@media (min-width: 62em) {\n\t.headerInside-banner{\n\t\tpadding: 10em 0;\n\t}\n\t.headerInside-title{\n\t\tfont-size: 4em;\n\t}\n\t.headerInside-title::before,\n\t.headerInside-title::after{\n\t\ttop: -0.4em;\n\t\tborder-width: 0.1em 0 0;\n\t\twidth: 20%;\n\t}\n\t.headerInside-title::after{\n\t\ttop: auto;\n\t\tbottom: -0.4em;\n\t}\n}\n", ""]);
 
 // exports
 
@@ -2131,7 +2151,7 @@ module.exports = "<footer class=\"footerContact\">\n  <div class=\"footerContact
 /***/ 788:
 /***/ (function(module, exports) {
 
-module.exports = "<header #header class=\"headerInside\">\n    <nav #nav class=\"headerInside-navbar\">\n      <a class=\"headerInside-navbar-back\" routerLink=\"/\">\n        <i class=\"material-icons\">arrow_back</i>Pagina inicial\n      </a>\n    </nav>\n    <div class=\"headerInside-banner\">\n      <h2 class=\"headerInside-title editableSimple\">\n          <medium-editor *ngIf=\"editable\" [(editorModel)]=\"title\"\n      [editorOptions]=\"{'toolbar': false}\"\n      [editorPlaceholder]=\"'titulo'\"></medium-editor>\n          <span *ngIf=\"!editable\">{{title}}</span>\n      </h2>\n    </div>\n</header>\n"
+module.exports = "<header #header class=\"headerInside\">\n    <nav #nav class=\"headerInside-navbar\">\n      <a class=\"headerInside-navbar-back\" routerLink=\"/\">\n        <i class=\"material-icons\">arrow_back</i>Pagina inicial\n      </a>\n    </nav>\n    <div #banner class=\"headerInside-banner\">\n      <h2 class=\"headerInside-title editableSimple\">\n          <medium-editor *ngIf=\"editable\" [(editorModel)]=\"title\"\n      [editorOptions]=\"{'toolbar': false}\"\n      [editorPlaceholder]=\"'titulo'\"></medium-editor>\n          <span *ngIf=\"!editable\">{{title}}</span>\n      </h2>\n    </div>\n</header>\n"
 
 /***/ }),
 
@@ -2152,14 +2172,14 @@ module.exports = " <ul #pgList>\n    <li *ngFor=\"let number of listNumbers\"\n 
 /***/ 791:
 /***/ (function(module, exports) {
 
-module.exports = "<details-header #header [editable]=\"true\" [title]=\"(service | async)?.titulo\"></details-header>\n<content-internal [editable]=\"true\" #content [firstColumn]=\"(service | async)?.conteudo1\"\n                  [secondColumn]=\"(service | async)?.conteudo2\"></content-internal>\n<footer-internal>\n  <button (click)=\"save()\" *ngIf=\"!inSaving && authService.isAuthenticated()\" md-fab button-save>\n    <md-icon>save</md-icon>\n  </button>\n  <md-progress-circle *ngIf=\"inSaving\"\n      mode=\"indeterminate\" button-save>\n  </md-progress-circle>\n</footer-internal>\n"
+module.exports = "<details-header #header [editable]=\"true\"\n                [title]=\"(service | async)?.titulo\" [img]=\"(service | async)?.banner_img\"></details-header>\n<content-internal [editable]=\"true\" #content [firstColumn]=\"(service | async)?.conteudo1\"\n                  [secondColumn]=\"(service | async)?.conteudo2\"></content-internal>\n<footer-internal>\n  <button md-fab button-save (click)=\"save()\"\n          *ngIf=\"!inSaving && authService.isAuthenticated()\">\n    <md-icon>save</md-icon>\n  </button>\n  <md-progress-circle *ngIf=\"inSaving\"\n      mode=\"indeterminate\" button-save>\n  </md-progress-circle>\n</footer-internal>\n"
 
 /***/ }),
 
 /***/ 792:
 /***/ (function(module, exports) {
 
-module.exports = "<details-header [title]=\"(service | async)?.titulo\"></details-header>\n<content-internal [firstColumn]=\"(service | async)?.conteudo1\"\n                  [secondColumn]=\"(service | async)?.conteudo2\"></content-internal>\n<footer-internal>\n   <button *ngIf=\"authService.isAuthenticated()\" (click)=\"edit()\" md-fab button-save>\n    <md-icon>edit</md-icon>\n  </button>\n</footer-internal>\n"
+module.exports = "<details-header [title]=\"(service | async)?.titulo\"\n                [img]=\"(service | async)?.banner_img\">\n</details-header>\n<content-internal [firstColumn]=\"(service | async)?.conteudo1\"\n                  [secondColumn]=\"(service | async)?.conteudo2\"></content-internal>\n<footer-internal>\n   <button *ngIf=\"authService.isAuthenticated()\" (click)=\"edit()\" md-fab button-save>\n    <md-icon>edit</md-icon>\n  </button>\n</footer-internal>\n"
 
 /***/ }),
 

@@ -34,6 +34,8 @@ import { ContentInternalComponent } from './component/internal/content-internal/
 import { FooterInternalComponent } from './component/internal/footer-internal/footer-internal.component';
 import { MediumEditorDirective } from 'angular2-medium-editor/medium-editor.directive';
 import { LoginComponent } from './component/login/login.component';
+import { UploadImagesService } from './service/upload-images.service';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDTdga1yF8R130Asi8Tm224xX5DynYUu54",
@@ -82,7 +84,8 @@ const firebaseConfig = {
   providers: [
     WindowService,
     AuthService,
-    AuthGuard
+    AuthGuard,
+    UploadImagesService
   ],
   bootstrap: [AppComponent]
 })

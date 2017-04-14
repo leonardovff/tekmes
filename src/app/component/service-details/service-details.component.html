@@ -1,4 +1,6 @@
-<details-header [title]="(service | async)?.titulo"></details-header>
+<details-header [title]="(service | async)?.titulo"
+                [img]="(service | async)?.banner_img">
+</details-header>
 <content-internal [firstColumn]="(service | async)?.conteudo1"
                   [secondColumn]="(service | async)?.conteudo2"></content-internal>
 <footer-internal>

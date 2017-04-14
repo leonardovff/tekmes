@@ -4,12 +4,13 @@
         <i class="material-icons">arrow_back</i>Pagina inicial
       </a>
     </nav>
-    <div class="headerInside-banner">
+    <div #banner class="headerInside-banner">
       <h2 class="headerInside-title editableSimple">
           <medium-editor *ngIf="editable" [(editorModel)]="title"
       [editorOptions]="{'toolbar': false}"
       [editorPlaceholder]="'titulo'"></medium-editor>
           <span *ngIf="!editable">{{title}}</span>
       </h2>
+      <ng-content select="[button-change-cover]"></ng-content>
     </div>
 </header>

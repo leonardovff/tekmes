@@ -10,14 +10,14 @@ import { AuthGuard } from './auth/auth.guard';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'servicos/:id', component: ServiceDetailsComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'not-found', component: HomeComponent },
   {
     path: 'servicos/:id/edit',
     component: ServiceDetailsEditComponent,
     canActivate: [AuthGuard]
   },
-  { path: 'servicos/:id', component: ServiceDetailsComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'not-found', component: HomeComponent },
   { path: '**', redirectTo: 'not-found' }
 ];
 

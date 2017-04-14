@@ -1,8 +1,16 @@
-<details-header #header [editable]="true" [title]="(service | async)?.titulo"></details-header>
+<details-header #header [editable]="true"
+                [title]="(service | async)?.titulo" [img]="(service | async)?.banner_img">
+  <button class="change-cover" md-raised-button button-change-cover
+        *ngIf="!inSaving && authService.isAuthenticated()" (click)="inputUpload.click()">
+        Alterar capa
+  </button>
+  <input #inputUpload (change)="changeListener($event)" type="file">
+</details-header>
 <content-internal [editable]="true" #content [firstColumn]="(service | async)?.conteudo1"
                   [secondColumn]="(service | async)?.conteudo2"></content-internal>
 <footer-internal>
-  <button (click)="save()" *ngIf="!inSaving && authService.isAuthenticated()" md-fab button-save>
+  <button md-fab button-save (click)="save()"
+          *ngIf="!inSaving && authService.isAuthenticated()">
     <md-icon>save</md-icon>
   </button>
   <md-progress-circle *ngIf="inSaving"

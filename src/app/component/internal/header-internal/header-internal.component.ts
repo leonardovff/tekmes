@@ -10,9 +10,11 @@ declare var $:any;
 })
 export class HeaderInternalComponent implements OnInit {
   @Input() title:string = "";
+  @Input() img:string = "";
   @Input() editable:boolean = false;
   @ViewChild('header') header:ElementRef;
   @ViewChild('nav') nav:ElementRef;
+  @ViewChild('banner') banner:ElementRef;
   el = null;
   fatherEl = null;
   height = 0;
@@ -21,8 +23,18 @@ export class HeaderInternalComponent implements OnInit {
       this.onResize();
     });
   }
-
+  changeBanner(){
+    let backgroundImage = 'linear-gradient(to bottom, rgba(0, 0, 0, 0.75),';
+    backgroundImage += "transparent),url('"+this.img+"')";
+    console.log(backgroundImage);
+    console.log(this.banner);
+    this.banner.nativeElement.style.backgroundImage = backgroundImage;
+  }
   ngOnInit() {
+  }
+  ngOnChanges(){
+    console.log('entrou');
+    this.changeBanner();
   }
   ngAfterViewInit(){
       this.el = $(this.nav.nativeElement);

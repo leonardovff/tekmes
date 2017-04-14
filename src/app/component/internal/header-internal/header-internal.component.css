@@ -4,7 +4,7 @@
 	clear:both;
 	top:0;
 	left:0;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent),url('/tekmes/assets/img/banner_services.jpg') no-repeat center center;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent),white no-repeat center center;
 	background-size: cover;
 	text-align: center;
 	width: 100%;

@@ -6,3 +6,9 @@ button, md-progress-circle{
 md-progress-circle{
   width: 50px;
 }
+.change-cover{
+  position: absolute;
+}
+input{
+  display: none;
+}

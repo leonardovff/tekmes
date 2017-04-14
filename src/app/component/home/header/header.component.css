@@ -9,7 +9,7 @@ body{
 .header>section{
 	clear:both;
 	text-align: center;
-	background: url("/tekmes/assets/img/banner.jpg") no-repeat center center;
+	background: url("/assets/img/banner.jpg") no-repeat center center;
 	background-size: cover;
 	width: 100%;
 	padding: 5em 0;
